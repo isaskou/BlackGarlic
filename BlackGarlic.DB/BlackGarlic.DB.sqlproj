@@ -60,6 +60,10 @@
     <Folder Include="Tables\People" />
     <Folder Include="Tables\Products" />
     <Folder Include="Tables\Panier" />
+    <Folder Include="Script" />
+    <Folder Include="StoredProcedure" />
+    <Folder Include="StoredProcedure\CRUDCategoryProduct" />
+    <Folder Include="StoredProcedure\CRUDProduct" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\People\Adress.sql" />
@@ -73,5 +77,23 @@
     <Build Include="Tables\Panier\Caddie.sql" />
     <Build Include="Tables\Panier\ShipAmount.sql" />
     <Build Include="Tables\Panier\TVAAmount.sql" />
+    <Build Include="StoredProcedure\CRUDCategoryProduct\SP_AddCategoryProduct.sql" />
+    <Build Include="StoredProcedure\CRUDCategoryProduct\SP_GetAllCategoryProduct.sql" />
+    <Build Include="StoredProcedure\CRUDCategoryProduct\SP_GetCategoryProductByName.sql" />
+    <Build Include="StoredProcedure\CRUDProduct\SP_AddProduct.sql" />
+    <Build Include="StoredProcedure\CRUDProduct\SP_GetAllProducts.sql" />
+    <Build Include="StoredProcedure\CRUDProduct\SP_GetAllProductFromCategoryProduct.sql" />
+    <Build Include="StoredProcedure\CRUDProduct\SP_GetProductById.sql" />
+    <Build Include="StoredProcedure\CRUDProduct\SP_UpdateProduct.sql" />
+    <Build Include="StoredProcedure\CRUDCategoryProduct\SP_UpdateCategoryProduct.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="BlackGarlic.DB.publish.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Script\Script.AddDefaultRoles.sql" />
+    <None Include="Script\Script.AddDefaultCategoryProduct.sql" />
+    <None Include="Script\Script.AddDefaultProduct.sql" />
+    <PostDeploy Include="Script\Script.PostDeploymentGeneral.sql" />
   </ItemGroup>
 </Project>
