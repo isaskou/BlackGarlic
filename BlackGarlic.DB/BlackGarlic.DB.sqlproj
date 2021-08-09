@@ -63,13 +63,15 @@
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\People\Adress.sql" />
-    <Build Include="Tables\People\Client.sql" />
+    <Build Include="Tables\People\Customer.sql" />
     <Build Include="Tables\People\Person.sql" />
     <Build Include="Tables\People\Provider.sql" />
     <Build Include="Tables\People\Role.sql" />
     <Build Include="Tables\Products\Product.sql" />
-    <Build Include="Tables\Products\TypeProduct.sql" />
+    <Build Include="Tables\Products\CategoryProduct.sql" />
     <Build Include="Tables\Panier\CaddieLine.sql" />
     <Build Include="Tables\Panier\Caddie.sql" />
+    <Build Include="Tables\Panier\ShipAmount.sql" />
+    <Build Include="Tables\Panier\TVAAmount.sql" />
   </ItemGroup>
 </Project>

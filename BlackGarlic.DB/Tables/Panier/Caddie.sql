@@ -14,6 +14,6 @@
 	
 	CONSTRAINT FK_Caddie_Customer
 		FOREIGN KEY (CustomerId)
-		References Customer(Id),
+		References Customer(Id)
 
 )

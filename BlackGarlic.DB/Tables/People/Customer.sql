@@ -5,6 +5,7 @@
 	[PersonId] INT NOT NULL,
 	Phone int NULL,
 
+
 	CONSTRAINT PK_CustomerId PRIMARY KEY (Id),
 
 	CONSTRAINT FK_Client_Person
