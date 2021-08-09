@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[TVAAmount]
+(
+	[Id] INT NOT NULL IDENTITY,
+	TVAType decimal(3,2) NOT NULL,
+
+	CONSTRAINT PK_TVAAmountID PRIMARY KEY (Id)
+)

@@ -59,6 +59,7 @@
     <Folder Include="Tables" />
     <Folder Include="Tables\People" />
     <Folder Include="Tables\Products" />
+    <Folder Include="Tables\Panier" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\People\Adress.sql" />
@@ -68,5 +69,7 @@
     <Build Include="Tables\People\Role.sql" />
     <Build Include="Tables\Products\Product.sql" />
     <Build Include="Tables\Products\TypeProduct.sql" />
+    <Build Include="Tables\Panier\CaddieLine.sql" />
+    <Build Include="Tables\Panier\Caddie.sql" />
   </ItemGroup>
 </Project>
