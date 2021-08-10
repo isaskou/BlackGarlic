@@ -3,7 +3,7 @@
 	[Id] INT NOT NULL IDENTITY,
 	[FirstName] nvarchar(50),
 	[LastName] nvarchar(50),
-	[Email] nvarchar(255) UNIQUE,
+	[Email] nvarchar(255) UNIQUE NOT NULL,
 	[Password] varbinary(32),
 	Salt char(36),
 	AdressId int NULL,
