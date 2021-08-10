@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31410.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "BlackGarlic.DB", "BlackGarlic.DB\BlackGarlic.DB.sqlproj", "{BD691F24-73E5-4A56-A3EA-0394253D17B4}"
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "00_BlackGarlic.DB", "BlackGarlic.DB\00_BlackGarlic.DB.sqlproj", "{BD691F24-73E5-4A56-A3EA-0394253D17B4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectionTool", "ConnectionTool\ConnectionTool.csproj", "{9CBB94F0-F09B-45FE-AC36-6C80160AB692}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlackGarlic.DAL", "BlackGarlic.DAL\BlackGarlic.DAL.csproj", "{F7CABDEE-FBAC-42BC-907C-4C691FFE8181}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +25,10 @@ Global
 		{9CBB94F0-F09B-45FE-AC36-6C80160AB692}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9CBB94F0-F09B-45FE-AC36-6C80160AB692}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9CBB94F0-F09B-45FE-AC36-6C80160AB692}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7CABDEE-FBAC-42BC-907C-4C691FFE8181}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7CABDEE-FBAC-42BC-907C-4C691FFE8181}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7CABDEE-FBAC-42BC-907C-4C691FFE8181}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7CABDEE-FBAC-42BC-907C-4C691FFE8181}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
