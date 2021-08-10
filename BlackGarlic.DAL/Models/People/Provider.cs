@@ -16,6 +16,5 @@ namespace BlackGarlic.DAL.Models.People
         public int? AdressId { get; set; }
 
 
-        public Adress Adress { get; set; }
     }
 }

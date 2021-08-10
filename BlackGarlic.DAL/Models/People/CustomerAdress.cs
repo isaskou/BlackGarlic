@@ -6,12 +6,10 @@ using System.Threading.Tasks;
 
 namespace BlackGarlic.DAL.Models.People
 {
-    public class Customer
+    public class CustomerAdress
     {
         public int Id { get; set; }
-        public string CompanyName { get; set; }
-        public int PersonId { get; set; }
-        public int? Phone { get; set; }
-
+        public int CustomerId { get; set; }
+        public int AdressId { get; set; }
     }
 }
