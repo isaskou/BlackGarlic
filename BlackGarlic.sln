@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlackGarlic.DAL", "BlackGar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlackGarlic.DTO", "BlackGarlic.DTO\BlackGarlic.DTO.csproj", "{16AD10A3-B3A4-4962-B2A1-62FC9826A66B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlackGarlic.API", "BlackGarlic.API\BlackGarlic.API.csproj", "{5C743E1C-D990-4EAB-9706-91BE17D599B5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{16AD10A3-B3A4-4962-B2A1-62FC9826A66B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{16AD10A3-B3A4-4962-B2A1-62FC9826A66B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{16AD10A3-B3A4-4962-B2A1-62FC9826A66B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C743E1C-D990-4EAB-9706-91BE17D599B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C743E1C-D990-4EAB-9706-91BE17D599B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C743E1C-D990-4EAB-9706-91BE17D599B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C743E1C-D990-4EAB-9706-91BE17D599B5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
