@@ -9,7 +9,7 @@ namespace BlackGarlic.DAL.Models.People
     public class Customer
     {
         public int Id { get; set; }
-        public string? CompanyName { get; set; }
+        public string CompanyName { get; set; }
         public int PersonId { get; set; }
         public int? Phone { get; set; }
 
