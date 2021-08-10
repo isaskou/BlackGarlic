@@ -8,6 +8,7 @@
 
 	CONSTRAINT PK_CustomerId PRIMARY KEY (Id),
 
+
 	CONSTRAINT FK_Client_Person
 		FOREIGN KEY (PersonId)
 		REFERENCES Person(Id)

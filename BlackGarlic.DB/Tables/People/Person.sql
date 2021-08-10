@@ -6,14 +6,10 @@
 	[Email] nvarchar(255) UNIQUE NOT NULL,
 	[Password] varbinary(32),
 	Salt char(36),
-	AdressId int NULL,
 	[RoleId] int NOT NULL,
 	
 	CONSTRAINT PK_Id PRIMARY KEY (Id),
 
-	CONSTRAINT FK_Person_Adress
-		FOREIGN KEY (AdressId)
-		REFERENCES Adress(Id),
 
 	CONSTRAINT FK_Person_Role
 		FOREIGN KEY (RoleId)
