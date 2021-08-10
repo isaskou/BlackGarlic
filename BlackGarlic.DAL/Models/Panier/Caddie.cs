@@ -12,9 +12,7 @@ namespace BlackGarlic.DAL.Models.Panier
         public int Id { get; set; }
         public DateTime OrderDate { get; set; }
         public int CustomerId { get; set; }
-        public Customer Customer { get; set; }
         public int? ShipAmountId { get; set; }
-        public ShipAmount ShipAmount { get; set; }
         public double TotalCaddie { get; set; }
     }
 }
