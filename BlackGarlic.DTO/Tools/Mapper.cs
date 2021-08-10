@@ -11,23 +11,6 @@ namespace BlackGarlic.DTO.Tools
     {
         #region People
 
-        public static DTO.Models.People.Adress AdressDTOtoDAL(this DAL.Models.People.Adress a)
-        {
-            return new DTO.Models.People.Adress(a.Id, a.Street, a.Num, a.PostalCode, a.City, a.District);
-        }
-
-        public static DAL.Models.People.Adress AdressDAOtoDTO(this DTO.Models.People.Adress a)
-        {
-            return new DAL.Models.People.Adress
-            {
-                Id = a.Id,
-                Street = a.Street,
-                Num = a.Number,
-                PostalCode = a.PostalCode,
-                City = a.City,
-                District = a.District
-            };
-        }
 
         public static DTO.Models.People.Customer CustomerDTOtoDAL(this DAL.Models.People.Customer c)
         {
@@ -162,6 +145,7 @@ namespace BlackGarlic.DTO.Tools
 
         public static DAL.Models.Products.Product ProductDALtoDTO(this DAL.Models.Products.Product p)
         {
+            if (p == null) return null;
             return new DAL.Models.Products.Product
             {
                 Id = p.Id,
