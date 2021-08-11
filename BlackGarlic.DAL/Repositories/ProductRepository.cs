@@ -30,14 +30,16 @@ namespace BlackGarlic.DAL.Repositories
 
         public IEnumerable<Product> GetAll()
         {
-            Command cmd = new Command("SP_GetAllProducts", true);
+            Command cmd = new Command("V_GetAllProducts", true);
+            //Command cmd = new Command("SELECT * FROM Product", false);
+
             return _connection.ExecuteReader(cmd, Converter.ProductConvert);
         }
 
         public Product GetOne(int id)
         {
             Command cmd = new Command("SP_GetProductById", true);
-            cmd.AddParameters("Id", id);
+            cmd.AddParameters("productId", id);
             return _connection.ExecuteReader(cmd, Converter.ProductConvert).FirstOrDefault();
         }
 

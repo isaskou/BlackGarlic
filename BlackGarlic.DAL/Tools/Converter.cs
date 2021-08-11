@@ -91,9 +91,9 @@ namespace BlackGarlic.DAL.Tools
                 Name = reader["Name"].ToString(),
                 Description = reader["Description"].ToString(),
                 IsDisabled = (bool)reader["IsDisabled"],
-                UnitPrice = (double)reader["UnitPrice"],
+                UnitPrice = (decimal)reader["UnitPrice"],
                 CategoryProductId = (int)reader["CategoryProductId"],
-                ProviderId = (int)reader["ProviderId"],
+                //ProviderId = (int)reader["ProviderId"],
                 PictureUrl = reader["PictureUrl"].ToString()
             };
         }
