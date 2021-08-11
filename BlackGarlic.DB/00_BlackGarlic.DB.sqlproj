@@ -93,9 +93,6 @@
     <None Include="BlackGarlic.DB.publish.xml" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Script\Script.AddDefaultRoles.sql" />
-    <None Include="Script\Script.AddDefaultCategoryProduct.sql" />
-    <None Include="Script\Script.AddDefaultProduct.sql" />
     <PostDeploy Include="Script\Script.PostDeploymentGeneral.sql" />
   </ItemGroup>
 </Project>
