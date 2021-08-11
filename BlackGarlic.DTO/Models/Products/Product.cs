@@ -13,8 +13,11 @@ namespace BlackGarlic.DTO.Models.Products
         public string Name { get; set; }
         public string Description { get; set; }
         public bool IsDisabled { get; set; }
-        public double UnitPrice { get; set; }
+        public decimal UnitPrice { get; set; }
+
+        public int CategoryId { get; set; }
         public List<CategoryProduct> Categories { get; set; }
+        public int ProviderId { get; set; }
         public Provider Provider { get; set; }
         public string PictureUrl { get; set; }
 

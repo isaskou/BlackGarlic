@@ -27,7 +27,7 @@ namespace BlackGarlic.DTO.Services
 
         public IEnumerable<Product> GetAll()
         {
-            return _productRepo.GetAll().Select(p => p.ProductDTOtoDAL());
+            return _productRepo.GetAll().Select(p => p.toDTO());
         }
 
         public Product GetById(int id)
@@ -42,7 +42,7 @@ namespace BlackGarlic.DTO.Services
 
         public void Update(Product entity)
         {
-            throw new NotImplementedException();
+            _productRepo.Update(entity.toDAL());
         }
     }
 }
