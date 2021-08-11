@@ -24,7 +24,7 @@ namespace BlackGarlic.DTO.Tools.ProductsMapper
             };
         }
 
-        public static dal.Product toDAL(this dal.Product p)
+        public static dal.Product toDAL(this dto.Product p)
         {
             if (p == null) return null;
             return new dal.Product
@@ -39,6 +39,5 @@ namespace BlackGarlic.DTO.Tools.ProductsMapper
                 PictureUrl = p.PictureUrl
             };
         }
-
     }
 }

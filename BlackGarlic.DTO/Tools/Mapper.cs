@@ -130,54 +130,7 @@ namespace BlackGarlic.DTO.Tools
         #endregion
 
         #region Products
-        public static DTO.Models.Products.Product ProductDTOtoDAL(this DAL.Models.Products.Product p)
-        {
-            return new Models.Products.Product
-            {
-                Id = p.Id,
-                Name = p.Name,
-                Description = p.Description,
-                IsDisabled = p.IsDisabled,
-                UnitPrice = p.UnitPrice,
-                PictureUrl = p.PictureUrl
-            };
-        }
 
-        public static DAL.Models.Products.Product ProductDALtoDTO(this DAL.Models.Products.Product p)
-        {
-            if (p == null) return null;
-            return new DAL.Models.Products.Product
-            {
-                Id = p.Id,
-                Name = p.Name,
-                Description = p.Description,
-                IsDisabled = p.IsDisabled,
-                UnitPrice = p.UnitPrice,
-                CategoryProductId = p.CategoryProductId,
-                ProviderId = p.ProviderId,
-                PictureUrl = p.PictureUrl
-            };
-        }
-
-        public static DTO.Models.Products.CategoryProduct CategoryDTOtoDAL(this DAL.Models.Products.CategoryProduct cp)
-        {
-            return new Models.Products.CategoryProduct
-            {
-                Id = cp.Id,
-                Name = cp.Name,
-                Description = cp.Description
-            };
-        }
-
-        public static DAL.Models.Products.CategoryProduct CategoryDALtoDTO(this DAL.Models.Products.CategoryProduct cp)
-        {
-            return new DAL.Models.Products.CategoryProduct
-            {
-                Id = cp.Id,
-                Name = cp.Name,
-                Description = cp.Description
-            };
-        }
          
 
 
