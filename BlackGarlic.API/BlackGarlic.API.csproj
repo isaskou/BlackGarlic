@@ -8,4 +8,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BlackGarlic.DAL\BlackGarlic.DAL.csproj" />
+    <ProjectReference Include="..\BlackGarlic.DTO\BlackGarlic.DTO.csproj" />
+  </ItemGroup>
+
 </Project>

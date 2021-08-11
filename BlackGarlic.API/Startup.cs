@@ -1,3 +1,7 @@
+using BlackGarlic.DAL.Interfaces;
+using BlackGarlic.DAL.Repositories;
+using BlackGarlic.DTO.Interfaces;
+using BlackGarlic.DTO.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -32,6 +36,14 @@ namespace BlackGarlic.API
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "BlackGarlic.API", Version = "v1" });
             });
+
+            services.AddCors();
+
+            #region Product
+            services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<IProductService, ProductService>();
+
+            #endregion
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
