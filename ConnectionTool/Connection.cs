@@ -88,9 +88,6 @@ namespace ConnectionTool
                 sqlCommand.Parameters.Add(parameter);
             }
             return sqlCommand;
-            {
-
-            }
         }
     }
 }
