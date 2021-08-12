@@ -1,4 +1,5 @@
 ﻿using BlackGarlic.DAL.Interfaces;
+using BlackGarlic.DAL.Interfaces.IProductsRepos;
 using BlackGarlic.DTO.Interfaces;
 using BlackGarlic.DTO.Interfaces.IProductsServices;
 using BlackGarlic.DTO.Models.Products;
