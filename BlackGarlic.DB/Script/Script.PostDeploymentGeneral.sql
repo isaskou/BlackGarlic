@@ -37,3 +37,11 @@ VALUES
     ('Assistant'),
     ('Com')
 GO
+
+EXEC SP_InsertPerson
+    @FirstName = 'Isabel',
+	@LastName ='Skou',
+	@Email ='isa@mail.be',
+	@Password ='test',
+	@RoleId =1
+GO

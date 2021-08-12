@@ -63,8 +63,13 @@
     <Folder Include="Tables\Panier" />
     <Folder Include="Script" />
     <Folder Include="StoredProcedure" />
-    <Folder Include="StoredProcedure\CRUDCategoryProduct" />
-    <Folder Include="StoredProcedure\CRUDProduct" />
+    <Folder Include="StoredProcedure\Products" />
+    <Folder Include="StoredProcedure\Products\CRUDCategoryProduct" />
+    <Folder Include="StoredProcedure\Products\CRUDProduct" />
+    <Folder Include="StoredProcedure\People" />
+    <Folder Include="StoredProcedure\People\Person" />
+    <Folder Include="Fonctions" />
+    <Folder Include="VIews" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\People\Adress.sql" />
@@ -78,17 +83,24 @@
     <Build Include="Tables\Panier\Caddie.sql" />
     <Build Include="Tables\Panier\ShipAmount.sql" />
     <Build Include="Tables\Panier\TVAAmount.sql" />
-    <Build Include="StoredProcedure\CRUDCategoryProduct\SP_AddCategoryProduct.sql" />
-    <Build Include="StoredProcedure\CRUDCategoryProduct\SP_GetAllCategoryProduct.sql" />
-    <Build Include="StoredProcedure\CRUDCategoryProduct\SP_GetCategoryProductByName.sql" />
-    <Build Include="StoredProcedure\CRUDProduct\SP_AddProduct.sql" />
-    <Build Include="StoredProcedure\CRUDProduct\SP_GetAllProducts.sql" />
-    <Build Include="StoredProcedure\CRUDProduct\SP_GetAllProductFromCategoryProduct.sql" />
-    <Build Include="StoredProcedure\CRUDProduct\SP_GetProductById.sql" />
-    <Build Include="StoredProcedure\CRUDProduct\SP_UpdateProduct.sql" />
-    <Build Include="StoredProcedure\CRUDCategoryProduct\SP_UpdateCategoryProduct.sql" />
     <Build Include="Tables\People\CustomersAdresses.sql" />
-    <Build Include="StoredProcedure\CRUDCategoryProduct\SP_GetCategoryById.sql" />
+    <Build Include="StoredProcedure\Products\CRUDCategoryProduct\SP_AddCategoryProduct.sql" />
+    <Build Include="StoredProcedure\Products\CRUDCategoryProduct\SP_GetAllCategoryProduct.sql" />
+    <Build Include="StoredProcedure\Products\CRUDCategoryProduct\SP_GetCategoryById.sql" />
+    <Build Include="StoredProcedure\Products\CRUDCategoryProduct\SP_GetCategoryProductByName.sql" />
+    <Build Include="StoredProcedure\Products\CRUDCategoryProduct\SP_UpdateCategoryProduct.sql" />
+    <Build Include="StoredProcedure\Products\CRUDProduct\SP_AddProduct.sql" />
+    <Build Include="StoredProcedure\Products\CRUDProduct\SP_GetAllProductFromCategoryProduct.sql" />
+    <Build Include="StoredProcedure\Products\CRUDProduct\SP_GetAllProducts.sql" />
+    <Build Include="StoredProcedure\Products\CRUDProduct\SP_GetProductById.sql" />
+    <Build Include="StoredProcedure\Products\CRUDProduct\SP_UpdateProduct.sql" />
+    <Build Include="StoredProcedure\People\Person\SP_InsertPerson.sql" />
+    <Build Include="StoredProcedure\People\Person\SP_UpdatePerson.sql" />
+    <Build Include="StoredProcedure\People\Person\SP_GetAllPerson.sql" />
+    <Build Include="Fonctions\SF_GenerateSalt.sql" />
+    <Build Include="VIews\V_GetRandom.sql" />
+    <Build Include="Fonctions\SF_GeneratePWD.sql" />
+    <Build Include="StoredProcedure\People\Person\SP_CheckPassword.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="BlackGarlic.DB.publish.xml" />
