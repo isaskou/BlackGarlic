@@ -15,7 +15,7 @@ namespace BlackGarlic.DAL.Models.Products
         public bool IsDisabled { get; set; }
         public decimal UnitPrice { get; set; }
         public int CategoryProductId { get; set; }
-        public int? ProviderId { get; set; }
+        //public int? ProviderId { get; set; }
         public string PictureUrl { get; set; }
     }
 }

@@ -30,7 +30,7 @@ namespace BlackGarlic.DAL.Repositories
 
         public IEnumerable<Product> GetAll()
         {
-            Command cmd = new Command("V_GetAllProducts", true);
+            Command cmd = new Command("SP_GetAllProducts", true);
             //Command cmd = new Command("SELECT * FROM Product", false);
 
             return _connection.ExecuteReader(cmd, Converter.ProductConvert);
@@ -51,7 +51,6 @@ namespace BlackGarlic.DAL.Repositories
             cmd.AddParameters("IsDisabled", entity.IsDisabled);
             cmd.AddParameters("UnitPrice", entity.UnitPrice);
             cmd.AddParameters("CategoryProductId", entity.CategoryProductId);
-            cmd.AddParameters("ProviderId", entity.ProviderId);
             cmd.AddParameters("PictureUrl", entity.PictureUrl);
 
             return (int)_connection.ExecuteScalar(cmd);
@@ -60,12 +59,12 @@ namespace BlackGarlic.DAL.Repositories
         public void Update(Product entity)
         {
             Command cmd = new Command("SP_UpdateProduct", true);
+            cmd.AddParameters("ProductId", entity.Id);
             cmd.AddParameters("Name", entity.Name);
             cmd.AddParameters("Description", entity.Description);
             cmd.AddParameters("IsDisabled", entity.IsDisabled);
             cmd.AddParameters("UnitPrice", entity.UnitPrice);
             cmd.AddParameters("CategoryProductId", entity.CategoryProductId);
-            cmd.AddParameters("ProviderId", entity.ProviderId);
             cmd.AddParameters("PictureUrl", entity.PictureUrl);
 
             _connection.ExecuteNonQuery(cmd);

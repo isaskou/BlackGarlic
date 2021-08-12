@@ -17,8 +17,8 @@ namespace BlackGarlic.DTO.Models.Products
 
         public int CategoryId { get; set; }
         public List<CategoryProduct> Categories { get; set; }
-        public int ProviderId { get; set; }
-        public Provider Provider { get; set; }
+        //public int ProviderId { get; set; }
+        //public Provider Provider { get; set; }
         public string PictureUrl { get; set; }
 
         public Product()

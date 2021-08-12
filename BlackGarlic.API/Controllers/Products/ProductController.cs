@@ -1,4 +1,5 @@
 ﻿using BlackGarlic.DTO.Interfaces;
+using BlackGarlic.DTO.Models.Products;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -62,20 +63,64 @@ namespace BlackGarlic.API.Controllers.Products
 
         // POST api/<ProductController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public IActionResult Post([FromBody] Product product)
         {
+            try
+            {
+                return Ok(_productService.Insert(product));
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, new
+                {
+                    Method = "Post",
+                    Message = ex.Message
+                });
+            }
         }
 
         // PUT api/<ProductController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public IActionResult Put(int id, [FromBody] Product product)
         {
+            try
+            {
+                if (product is null) return BadRequest();
+                if (id != product.Id) return BadRequest();
+
+                product.Id = id;
+                _productService.Update(product);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+
+                return StatusCode(StatusCodes.Status500InternalServerError, new
+                {
+                    Method = "Put",
+                    Message = ex.Message
+                });
+            }
+
         }
 
         // DELETE api/<ProductController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public IActionResult Delete(int id)
         {
+            try
+            {
+                return Ok(_productService.Delete(id));
+            }
+            catch (Exception ex)
+            {
+
+                return StatusCode(StatusCodes.Status500InternalServerError, new
+                {
+                    Method = "Delete",
+                    Message = ex.Message
+                });
+            }
         }
     }
 }
