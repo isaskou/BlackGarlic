@@ -27,7 +27,7 @@ namespace BlackGarlic.DAL.Repositories.ProductsRepo
 
         public IEnumerable<CategoryProduct> GetAll()
         {
-            Command cmd = new Command("SP_GetAllCatgoryProduct", true);
+            Command cmd = new Command("SP_GetAllCategoryProduct", true);
             return _connection.ExecuteReader(cmd, Converter.CategoryConvert);
         }
 
@@ -59,7 +59,7 @@ namespace BlackGarlic.DAL.Repositories.ProductsRepo
             Command cmd = new Command("SP_UpdateCategoryProduct", true);
             cmd.AddParameters("CategoryId", entity.Id);
             cmd.AddParameters("Name", entity.Name);
-            cmd.AddParameters("Desccription", entity.Description);
+            cmd.AddParameters("Description", entity.Description);
 
             _connection.ExecuteNonQuery(cmd);
         }
