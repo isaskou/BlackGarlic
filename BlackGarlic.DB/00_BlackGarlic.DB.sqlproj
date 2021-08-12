@@ -101,6 +101,9 @@
     <Build Include="VIews\V_GetRandom.sql" />
     <Build Include="Fonctions\SF_GeneratePWD.sql" />
     <Build Include="StoredProcedure\People\Person\SP_CheckPassword.sql" />
+    <Build Include="StoredProcedure\People\Person\SP_GetPersonById.sql" />
+    <Build Include="StoredProcedure\People\Person\SP_GetPersonByName.sql" />
+    <Build Include="StoredProcedure\People\Person\SP_GetPersonByMail.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="BlackGarlic.DB.publish.xml" />
