@@ -27,7 +27,6 @@ EXEC SP_AddProduct
 	@IsDisabled = 0,
 	@UnitPrice = 9.99, 
 	@CategoryProductId=1,
-    @ProviderId = null,
 	@PictureUrl =null
 GO
 

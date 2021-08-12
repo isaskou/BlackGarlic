@@ -6,7 +6,7 @@
 	[IsDisabled] Bit NOT NULL DEFAULT 0, 
 	[UnitPrice] decimal(6,2) NOT NULL,
 	[CategoryProductId] int NOT NULL,
-	[ProviderId] int NULL,
+	--[ProviderId] int NULL,
 	[PictureUrl] nvarchar(255),
 
 
@@ -16,7 +16,7 @@
 		FOREIGN KEY (CategoryProductId)
 		REFERENCES CategoryProduct(Id),
 
-	CONSTRAINT FK_Product_Provider
-		FOREIGN KEY (ProviderId)
-		REFERENCES [Provider](Id)
+	--CONSTRAINT FK_Product_Provider
+	--	FOREIGN KEY (ProviderId)
+	--	REFERENCES [Provider](Id)
 )

@@ -5,7 +5,6 @@
 	@IsDisabled Bit , 
 	@UnitPrice decimal(6,2) ,
 	@CategoryProductId int ,
-	@ProviderId int ,
 	@PictureUrl nvarchar(255)
 AS
 BEGIN
@@ -13,6 +12,6 @@ BEGIN
 	SET [Name]=@Name, [Description]=@Description, 
 	IsDisabled=@IsDisabled, UnitPrice=@UnitPrice,
 	CategoryProductId=@CategoryProductId, 
-	ProviderId=@ProviderId, PictureUrl=@PictureUrl
+	PictureUrl=@PictureUrl
 	WHERE Id=@ProductId
 END

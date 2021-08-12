@@ -4,7 +4,6 @@
 	@IsDisabled Bit , 
 	@UnitPrice decimal(6,2) ,
 	@CategoryProductId int ,
-	@ProviderId int ,
 	@PictureUrl nvarchar(255)
 AS
 BEGIN
@@ -14,12 +13,11 @@ BEGIN
 			[IsDisabled],
 			[UnitPrice],
 			[CategoryProductId],
-			[ProviderId],
 			[PictureUrl])
 		OUTPUT inserted.Id
 		VALUES(
 			@Name, @Description,@IsDisabled,
 			@UnitPrice, @CategoryProductId,
-			@ProviderId, @PictureUrl)
+			 @PictureUrl)
 END
 
