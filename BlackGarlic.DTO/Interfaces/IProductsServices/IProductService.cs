@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BlackGarlic.DTO.Interfaces
+namespace BlackGarlic.DTO.Interfaces.IProductsServices
 {
     public interface IProductService : IService<Product>
     {

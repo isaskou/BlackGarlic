@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 
 
-namespace BlackGarlic.DAL.Repositories
+namespace BlackGarlic.DAL.Repositories.ProductsRepo
 {
     public class ProductRepository : BaseRepository, IProductRepository
     {

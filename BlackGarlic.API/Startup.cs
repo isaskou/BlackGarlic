@@ -1,7 +1,7 @@
 using BlackGarlic.DAL.Interfaces;
-using BlackGarlic.DAL.Repositories;
-using BlackGarlic.DTO.Interfaces;
-using BlackGarlic.DTO.Services;
+using BlackGarlic.DAL.Repositories.ProductsRepo;
+using BlackGarlic.DTO.Interfaces.IProductsServices;
+using BlackGarlic.DTO.Services.ProductsServices;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;

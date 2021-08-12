@@ -1,5 +1,6 @@
 ﻿using BlackGarlic.DAL.Interfaces;
 using BlackGarlic.DTO.Interfaces;
+using BlackGarlic.DTO.Interfaces.IProductsServices;
 using BlackGarlic.DTO.Models.Products;
 using BlackGarlic.DTO.Tools;
 using BlackGarlic.DTO.Tools.ProductsMapper;
@@ -9,7 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BlackGarlic.DTO.Services
+namespace BlackGarlic.DTO.Services.ProductsServices
 {
     public class ProductService : IProductService
     {

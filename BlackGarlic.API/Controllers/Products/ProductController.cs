@@ -1,4 +1,5 @@
 ﻿using BlackGarlic.DTO.Interfaces;
+using BlackGarlic.DTO.Interfaces.IProductsServices;
 using BlackGarlic.DTO.Models.Products;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;

@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BlackGarlic.DAL.Interfaces
+namespace BlackGarlic.DAL.Interfaces.IProductsRepos
 {
     public interface IProductRepository : IRepository<Product, int>
     {
