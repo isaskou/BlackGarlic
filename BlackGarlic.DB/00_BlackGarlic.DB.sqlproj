@@ -88,6 +88,7 @@
     <Build Include="StoredProcedure\CRUDProduct\SP_UpdateProduct.sql" />
     <Build Include="StoredProcedure\CRUDCategoryProduct\SP_UpdateCategoryProduct.sql" />
     <Build Include="Tables\People\CustomersAdresses.sql" />
+    <Build Include="StoredProcedure\CRUDCategoryProduct\SP_GetCategoryById.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="BlackGarlic.DB.publish.xml" />
