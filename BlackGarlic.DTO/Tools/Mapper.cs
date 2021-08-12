@@ -56,31 +56,6 @@ namespace BlackGarlic.DTO.Tools
             };
         }
 
-        public static DTO.Models.People.Person PersonDTOtoDAL(this DAL.Models.People.Person p)
-        {
-            return new Person
-            {
-                Id = p.Id,
-                FirstName = p.FirstName,
-                LastName = p.LastName,
-                Email = p.Email,
-                Password=p.Password,
-                RoleId = p.RoleId
-            };
-        }
-        public static DAL.Models.People.Person PersonDALtoDTO(this DAL.Models.People.Person p)
-        {
-            return new DAL.Models.People.Person
-            {
-                Id = p.Id,
-                FirstName = p.FirstName,
-                LastName = p.LastName,
-                Email = p.Email,
-                Password = p.Password,
-                RoleId = p.RoleId
-                
-            };
-        }
 
         public static DTO.Models.People.Provider ProviderDTOtoDAL(this DAL.Models.People.Provider p)
         {
