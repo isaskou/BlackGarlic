@@ -1,4 +1,5 @@
 using BlackGarlic.DAL.Interfaces;
+using BlackGarlic.DAL.Interfaces.IProductsRepos;
 using BlackGarlic.DAL.Repositories.ProductsRepo;
 using BlackGarlic.DTO.Interfaces.IProductsServices;
 using BlackGarlic.DTO.Services.ProductsServices;
@@ -43,7 +44,11 @@ namespace BlackGarlic.API
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped<IProductService, ProductService>();
 
+            services.AddScoped<ICategoryProductRepository, CategoryProductRepository>();
+            services.AddScoped<ICategoryService, CategoryService>();
+
             #endregion
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
