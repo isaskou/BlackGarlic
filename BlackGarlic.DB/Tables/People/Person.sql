@@ -4,7 +4,7 @@
 	[FirstName] nvarchar(50),
 	[LastName] nvarchar(50),
 	[Email] nvarchar(255) UNIQUE NOT NULL,
-	[Password] varbinary(32),
+	[Password] NVARCHAR(50),
 	Salt char(36),
 	[RoleId] int NOT NULL,
 	

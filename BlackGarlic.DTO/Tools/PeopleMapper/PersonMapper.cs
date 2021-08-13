@@ -19,7 +19,7 @@ namespace BlackGarlic.DTO.Tools.PeopleMapper
                 FirstName = p.FirstName,
                 LastName = p.LastName,
                 Email = p.Email,
-                Password = p.Password,
+                //Password = p.Password,
                 RoleId = p.RoleId
             };
         }

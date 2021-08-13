@@ -55,7 +55,7 @@ namespace BlackGarlic.DAL.Tools
                 FirstName = reader["FirstName"].ToString(),
                 LastName = reader["LastName"].ToString(),
                 Email = reader["Email"].ToString(),
-                Password=(byte[])reader["Password"],
+                //Password=reader["Password"].ToString(),
                 RoleId = (int)reader["RoleId"]
             };
         }

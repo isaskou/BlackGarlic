@@ -9,7 +9,7 @@ namespace BlackGarlic.DTO.Models.People
         public string LastName { get; set; }
 
         public string Email { get; set; }
-        public byte[] Password { get; set; }
+        public string Password { get; set; }
         public string Salt { get; set; }
 
         public int RoleId { get; set; }
@@ -19,7 +19,7 @@ namespace BlackGarlic.DTO.Models.People
         {
         }
 
-        public Person(int id, string firstName, string lastName, string email, byte[] password, string salt, Role role)
+        public Person(int id, string firstName, string lastName, string email, string password, string salt, Role role)
         {
             Id = id;
             FirstName = firstName;

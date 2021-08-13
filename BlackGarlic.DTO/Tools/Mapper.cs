@@ -12,18 +12,18 @@ namespace BlackGarlic.DTO.Tools
         #region People
 
 
-        public static DTO.Models.People.Customer CustomerDTOtoDAL(this DAL.Models.People.Customer c)
-        {
-            if (c == null) return null;
-            return new Customer
-            {
-                Id = c.Id,
-                CompanyName = c.CompanyName,
-                PersonId = c.PersonId,
-                Person=new Person(c.PersonId, "", "", "", "", "", new Role()),
-                Phone = c.Phone
-            };
-        }
+        //public static DTO.Models.People.Customer CustomerDTOtoDAL(this DAL.Models.People.Customer c)
+        //{
+        //    if (c == null) return null;
+        //    return new Customer
+        //    {
+        //        Id = c.Id,
+        //        CompanyName = c.CompanyName,
+        //        PersonId = c.PersonId,
+        //        Person=new Person(c.PersonId, "", "", "", "", "", new Role()),
+        //        Phone = c.Phone
+        //    };
+        //}
 
         public static DAL.Models.People.Customer CustomerDAOtoDTO(this DTO.Models.People.Customer c)
         {
