@@ -1,7 +1,11 @@
 using BlackGarlic.DAL.Interfaces;
+using BlackGarlic.DAL.Interfaces.IPeopleRepos;
 using BlackGarlic.DAL.Interfaces.IProductsRepos;
+using BlackGarlic.DAL.Repositories.People;
 using BlackGarlic.DAL.Repositories.ProductsRepo;
+using BlackGarlic.DTO.Interfaces.IPeopleService;
 using BlackGarlic.DTO.Interfaces.IProductsServices;
+using BlackGarlic.DTO.Services.PeopleService;
 using BlackGarlic.DTO.Services.ProductsServices;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -48,6 +52,10 @@ namespace BlackGarlic.API
             services.AddScoped<ICategoryService, CategoryService>();
 
             #endregion
+            #region People
+            services.AddScoped<IPersonRepository, PersonRepository>();
+            services.AddScoped<IPersonService, PersonService>();
+            #endregion
 
         }
 
@@ -60,6 +68,8 @@ namespace BlackGarlic.API
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "BlackGarlic.API v1"));
             }
+
+            
 
             app.UseHttpsRedirection();
 
