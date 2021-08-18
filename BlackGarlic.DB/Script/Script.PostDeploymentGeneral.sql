@@ -45,3 +45,49 @@ EXEC SP_InsertPerson
 	@Password ='test',
 	@RoleId =1
 GO
+EXEC SP_InsertPerson
+    @FirstName = 'Antoine',
+	@LastName ='Isembaert',
+	@Email ='antoine@mail.be',
+	@Password ='test',
+	@RoleId =2
+GO
+
+INSERT INTO ShipAmount
+    VALUES 
+        ('Bruxelles', 2.99),
+        ('Brabant-Wallon', 1.99),
+        ('Namur', 0.99),
+        ('Liège', 1.99),
+        ('Luxembourg', 2.99),
+        ('Hainaut', 2.99)
+GO
+
+INSERT INTO TVAAmount
+    VALUES
+        (0.06),
+        (0.12),
+        (0.21)
+GO
+
+EXEC SP_AddCustomer
+    @CompanyName = 'AZEMBAERT',
+    @PersonId = 2,
+    @Phone=0489254252
+GO
+
+EXEC SP_AddAdress
+    @Street='Rue Vanderkindere', 
+    @Num='536', 
+    @PostalCode=1180,
+    @City='Uccle', 
+    @District='Bruxelles'
+GO
+
+EXEC SP_AddCustomerAdress
+    @CustomerId=1,
+    @AdressId=1
+GO
+
+
+    
