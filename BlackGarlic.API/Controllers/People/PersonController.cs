@@ -15,12 +15,15 @@ namespace BlackGarlic.API.Controllers.People
     [ApiController]
     public class PersonController : ControllerBase
     {
-        IPersonService _service;
+        IPersonService _personService;
+        IUserService _userService;
 
-        public PersonController(IPersonService service)
+        public PersonController(IPersonService personService, IUserService userService)
         {
-            _service = service;
+            _personService = personService;
+            _userService = userService;
         }
+
 
         // GET: api/<PersonController>
         [HttpGet]
@@ -28,7 +31,7 @@ namespace BlackGarlic.API.Controllers.People
         {
             try
             {
-                return Ok(_service.GetAll());
+                return Ok(_personService.GetAll());
             }
             catch (Exception ex)
             {
@@ -47,7 +50,7 @@ namespace BlackGarlic.API.Controllers.People
         {
             try
             {
-                return Ok(_service.GetPersonByName(name));
+                return Ok(_personService.GetPersonByName(name));
             }
             catch (Exception ex)
             {
@@ -69,7 +72,7 @@ namespace BlackGarlic.API.Controllers.People
         {
             try
             {
-                return Ok(_service.GetById(id));
+                return Ok(_personService.GetById(id));
             }
             catch (Exception ex)
             {
@@ -89,7 +92,7 @@ namespace BlackGarlic.API.Controllers.People
         {
             try
             {
-                return Ok(_service.GetPersonByMail(mail));
+                return Ok(_personService.GetPersonByMail(mail));
             }
             catch (Exception ex)
             {
@@ -111,8 +114,9 @@ namespace BlackGarlic.API.Controllers.People
         {
             try
             {
-                
-                return Ok(_service.Insert(p));
+                if (_userService.FindEmail(p.Email, p.Id)) return Ok("Email adress already exist");
+
+                return Ok(_personService.Insert(p));
             }
             catch (Exception ex)
             {
@@ -132,11 +136,12 @@ namespace BlackGarlic.API.Controllers.People
         {
             try
             {
+                if (_userService.FindEmail(p.Email, p.Id)) return Ok("Email adress already exist");
                 if (p == null) return BadRequest();
                 if (id != p.Id) return BadRequest();
 
                 p.Id = id;
-                _service.Update(p);
+                _personService.Update(p);
                 return Ok();
             }
             catch (Exception ex)
@@ -157,7 +162,7 @@ namespace BlackGarlic.API.Controllers.People
         {
             try
             {
-                return Ok(_service.Delete(id));
+                return Ok(_personService.Delete(id));
             }
             catch (Exception ex)
             {

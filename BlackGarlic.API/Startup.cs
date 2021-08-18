@@ -55,6 +55,9 @@ namespace BlackGarlic.API
             #region People
             services.AddScoped<IPersonRepository, PersonRepository>();
             services.AddScoped<IPersonService, PersonService>();
+
+            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IUserService, UserService>();
             #endregion
 
         }
