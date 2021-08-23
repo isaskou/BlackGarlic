@@ -25,7 +25,7 @@ namespace BlackGarlic.DAL.Repositories.People
 
         public IEnumerable<Customer> GetAll()
         {
-            Command cmd = new Command("SP_GetAllCustomersWithAdress", true);
+            Command cmd = new Command("SP_GetAllCustomers", true);
             return _connection.ExecuteReader(cmd, Converter.CustomerConvert);
         }
 
