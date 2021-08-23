@@ -117,6 +117,7 @@
     <Build Include="StoredProcedure\People\Customer\SP_UpdateCustomer.sql" />
     <Build Include="StoredProcedure\People\Person\SP_UpdatePersonWithoutPassword.sql" />
     <Build Include="StoredProcedure\People\Customer\SP_GetAllCustomers.sql" />
+    <Build Include="StoredProcedure\People\Customer\SP_UpdateCustomerAdress.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="BlackGarlic.DB.publish.xml" />
