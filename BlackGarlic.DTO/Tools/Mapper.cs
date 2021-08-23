@@ -25,36 +25,36 @@ namespace BlackGarlic.DTO.Tools
         //    };
         //}
 
-        public static DAL.Models.People.Customer CustomerDAOtoDTO(this DTO.Models.People.Customer c)
-        {
-            return new DAL.Models.People.Customer
-            {
-                Id = c.Id,
-                CompanyName = c.CompanyName,
-                PersonId = c.Person.Id,
-                Phone = c.Phone
-            };
-        }
+        //public static DAL.Models.People.Customer CustomerDAOtoDTO(this DTO.Models.People.Customer c)
+        //{
+        //    return new DAL.Models.People.Customer
+        //    {
+        //        Id = c.Id,
+        //        CompanyName = c.CompanyName,
+        //        PersonId = c.Person.Id,
+        //        Phone = c.Phone
+        //    };
+        //}
 
-        public static DTO.Models.People.CustomerAdress CustomerAdressDTOtoDAL(this DAL.Models.People.CustomerAdress ca)
-        {
-            return new CustomerAdress
-            {
-                Id = ca.Id,
-                CustomerId = ca.CustomerId,
-                AdressId = ca.AdressId
-            };
-        }
+        //public static DTO.Models.People.CustomerAdress CustomerAdressDTOtoDAL(this DAL.Models.People.CustomerAdress ca)
+        //{
+        //    return new CustomerAdress
+        //    {
+        //        Id = ca.Id,
+        //        CustomerId = ca.CustomerId,
+        //        AdressId = ca.AdressId
+        //    };
+        //}
 
-        public static DAL.Models.People.CustomerAdress CustomerAdressDALtoDTO(this DAL.Models.People.CustomerAdress ca)
-        {
-            return new DAL.Models.People.CustomerAdress
-            {
-                Id = ca.Id,
-                CustomerId = ca.CustomerId,
-                AdressId = ca.AdressId
-            };
-        }
+        //public static DAL.Models.People.CustomerAdress CustomerAdressDALtoDTO(this DAL.Models.People.CustomerAdress ca)
+        //{
+        //    return new DAL.Models.People.CustomerAdress
+        //    {
+        //        Id = ca.Id,
+        //        CustomerId = ca.CustomerId,
+        //        AdressId = ca.AdressId
+        //    };
+        //}
 
 
         public static DTO.Models.People.Provider ProviderDTOtoDAL(this DAL.Models.People.Provider p)
