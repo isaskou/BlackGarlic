@@ -45,7 +45,7 @@ namespace BlackGarlic.API.Controllers.People
         }
 
         [HttpGet]
-        [Route("api_Person/GetByName/")]
+        [Route("api/Person/GetByName/")]
         public IActionResult GetByName(string name)
         {
             try
