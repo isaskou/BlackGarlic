@@ -34,7 +34,9 @@ namespace BlackGarlic.DTO.Services.PeopleService
 
         public Customer GetById(int id)
         {
-            return _customerRepo.GetOne(id).toDAL();
+            Customer c = _customerRepo.GetOne(id).toDAL();
+            c.Person = _personRepository.GetOne(c.PersonId).toDTO();
+            return c;
         }
 
         public Customer GetCustomerByMail(string mail)

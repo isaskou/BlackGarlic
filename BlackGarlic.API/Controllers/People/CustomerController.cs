@@ -61,7 +61,7 @@ namespace BlackGarlic.API.Controllers.People
                 return StatusCode(StatusCodes.Status500InternalServerError, new
                 {
                     Method = "GetById",
-                    Message = ex.Message
+                    Message = ex
                 });
             }
         }

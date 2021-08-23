@@ -17,7 +17,7 @@ namespace BlackGarlic.DTO.Tools.PeopleMapper
                 Id = c.Id,
                 CompanyName = c.CompanyName,
                 PersonId = c.PersonId,
-                Person = new dto.Person(),
+                Person = null,
                 Phone = c.Phone
             };
         }
