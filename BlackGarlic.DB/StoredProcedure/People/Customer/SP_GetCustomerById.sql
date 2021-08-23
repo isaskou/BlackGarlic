@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [dbo].[GetCustomerById]
+﻿CREATE PROCEDURE [dbo].[SP_GetCustomerById]
 	@CustomerId int
 AS
 		SELECT p.FirstName, p.LastName, p.Email, c.CompanyName, c.Phone
