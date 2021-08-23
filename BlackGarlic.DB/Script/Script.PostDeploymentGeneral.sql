@@ -73,7 +73,7 @@ GO
 EXEC SP_AddCustomer
     @CompanyName = 'AZEMBAERT',
     @PersonId = 2,
-    @Phone=0489254252
+    @Phone='0489254252'
 GO
 
 EXEC SP_AddAdress

@@ -3,7 +3,7 @@
 	[Id] INT NOT NULL Identity,
 	CompanyName nvarchar(255) NULL,
 	[PersonId] INT NOT NULL,
-	Phone int NULL,
+	Phone nvarchar(10) NULL,
 
 
 	CONSTRAINT PK_CustomerId PRIMARY KEY (Id),
