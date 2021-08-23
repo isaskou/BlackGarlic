@@ -15,18 +15,24 @@ namespace BlackGarlic.DTO.Models.People
         public Person Person { get; set; }
         public int? Phone { get; set; }
 
+        public int AdressId { get; set; }
+        public CustomerAdress CustomerAdress { get; set; }
+
         //public List<Adress> Adresses { get; set; }
 
         public Customer()
         {
         }
 
-        public Customer(int id, string companyName, Person person, int? phone)
+        public Customer(int id, string companyName, int personId, Person person, int? phone, int adressId, CustomerAdress customerAdress)
         {
             Id = id;
             CompanyName = companyName;
+            PersonId = personId;
             Person = person;
             Phone = phone;
+            AdressId = adressId;
+            CustomerAdress = customerAdress;
         }
     }
 }

@@ -11,7 +11,7 @@ namespace BlackGarlic.DTO.Tools.PeopleMapper
 {
     public static class PersonMapper
     {
-        public static dto.Person toDTO(this dal.Person p)
+        public static dto.Person toDAL(this dal.Person p)
         {
             return new dto.Person
             {
@@ -24,7 +24,7 @@ namespace BlackGarlic.DTO.Tools.PeopleMapper
             };
         }
 
-        public static dal.Person toDAL(this dto.Person p)
+        public static dal.Person toDTO(this dto.Person p)
         {
             return new dal.Person
             {

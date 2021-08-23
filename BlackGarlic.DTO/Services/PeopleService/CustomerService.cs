@@ -31,13 +31,11 @@ namespace BlackGarlic.DTO.Services.PeopleService
             return _customerRepo.GetAll().Select(x => x.toDAL());
         }
 
-
         public Customer GetById(int id)
         {
-            Customer c = _customerRepo.GetOne(id).toDAL();
-            c.Person = _personRepository.GetOne(c.PersonId).toDTO();
-            return c;
+            return _customerRepo.GetOne(id).toDAL();
         }
+
 
         public Customer GetCustomerByMail(string mail)
         {
@@ -56,7 +54,10 @@ namespace BlackGarlic.DTO.Services.PeopleService
 
         public Customer GetCustomerWithAllInformationById(int id)
         {
-            throw new NotImplementedException();
+            Customer c = GetById(id);
+            c.Person = _personRepository.GetOne(c.PersonId).toDAL();
+            return c;
+
         }
 
         public int Insert(Customer entity)
