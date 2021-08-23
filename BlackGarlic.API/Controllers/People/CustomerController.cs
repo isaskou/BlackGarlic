@@ -29,6 +29,7 @@ namespace BlackGarlic.API.Controllers.People
 
         // GET: api/<CustomerController>
         [HttpGet]
+        [Route("api/Customer/GetAll")]
         public IActionResult GetAll()
         {
             try
@@ -47,6 +48,27 @@ namespace BlackGarlic.API.Controllers.People
             }
         }
 
+        //[HttpGet]
+        //[Route("api/Customer/GetAllWithDetails")]
+
+        //public IActionResult GetAllCustomersWithFullDetails()
+        //{
+        //    try
+        //    {
+        //        return Ok(_customerService.GetAllCustomersWithFullDetails());
+        //    }
+        //    catch (Exception ex)
+        //    {
+
+        //        return StatusCode(StatusCodes.Status500InternalServerError, new
+        //        {
+        //            Method = "GetAllWithDetails",
+        //            Message = ex.Message
+        //        });
+        //    }
+
+        //}
+
         // GET api/<CustomerController>/5
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
@@ -64,6 +86,26 @@ namespace BlackGarlic.API.Controllers.People
                     Message = ex
                 });
             }
+        }
+
+        [HttpGet]
+        [Route("api/Customer/FullDetails/{id}")]
+        public IActionResult GetCustomerWithFullDetailsById(int id)
+        {
+            try
+            {
+                return Ok(_customerService.GetCustomerWithAllInformationById(id));
+            }
+            catch (Exception ex)
+            {
+
+                return StatusCode(StatusCodes.Status500InternalServerError, new
+                {
+                    Method = "GetOneWithDetails",
+                    Message = ex
+                });
+            }
+
         }
 
         // POST api/<CustomerController>
