@@ -72,6 +72,7 @@
     <Folder Include="VIews" />
     <Folder Include="StoredProcedure\Panier" />
     <Folder Include="StoredProcedure\People\Customer" />
+    <Folder Include="StoredProcedure\People\Adress" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\People\Adress.sql" />
@@ -109,7 +110,6 @@
     <Build Include="StoredProcedure\People\Person\SP_FindEmail.sql" />
     <Build Include="StoredProcedure\People\Customer\SP_AddCustomer.sql" />
     <Build Include="StoredProcedure\People\Customer\SP_AddCustomerAdress.sql" />
-    <Build Include="StoredProcedure\People\Customer\SP_AddAdress.sql" />
     <Build Include="StoredProcedure\People\Customer\SP_GetAllCustomersWithAdress.sql" />
     <Build Include="StoredProcedure\People\Customer\SP_GetCustomerById.sql" />
     <Build Include="StoredProcedure\People\Customer\SP_GetCustomerByMail.sql" />
@@ -118,6 +118,9 @@
     <Build Include="StoredProcedure\People\Person\SP_UpdatePersonWithoutPassword.sql" />
     <Build Include="StoredProcedure\People\Customer\SP_GetAllCustomers.sql" />
     <Build Include="StoredProcedure\People\Customer\SP_UpdateCustomerAdress.sql" />
+    <Build Include="StoredProcedure\People\Adress\SP_AddAdress.sql" />
+    <Build Include="StoredProcedure\People\Adress\SP_UpdateAdress.sql" />
+    <Build Include="StoredProcedure\People\Adress\SP_GetAdressByCustomerId.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="BlackGarlic.DB.publish.xml" />
