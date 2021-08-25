@@ -14,11 +14,15 @@ namespace BlackGarlic.DTO.Services.PeopleService
     {
         private ICustomerRepository _customerRepo;
         private IPersonRepository _personRepository;
+        private IAdressRepository _adressRepository;
+        private ICustomerAdressRepository _customerAdressRepository;
 
-        public CustomerService(ICustomerRepository customerRepo, IPersonRepository personRepository)
+        public CustomerService(ICustomerRepository customerRepo, IPersonRepository personRepository, IAdressRepository adressRepository, ICustomerAdressRepository customerAdressRepository)
         {
             _customerRepo = customerRepo;
             _personRepository = personRepository;
+            _adressRepository = adressRepository;
+            _customerAdressRepository = customerAdressRepository;
         }
 
         public bool Delete(int id)
@@ -56,6 +60,8 @@ namespace BlackGarlic.DTO.Services.PeopleService
         {
             Customer c = GetById(id);
             c.Person = _personRepository.GetOne(c.PersonId).toDAL();
+            c.CustomerAdress = _customerAdressRepository.GetOne(c.Id).toDAL();
+            
             return c;
 
         }

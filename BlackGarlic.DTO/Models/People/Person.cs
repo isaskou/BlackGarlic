@@ -25,8 +25,8 @@ namespace BlackGarlic.DTO.Models.People
             FirstName = firstName;
             LastName = lastName;
             Email = email;
-            Password = password;
-            Salt = salt;
+            //Password = password;
+            //Salt = salt;
             Role = role;
         }
     }

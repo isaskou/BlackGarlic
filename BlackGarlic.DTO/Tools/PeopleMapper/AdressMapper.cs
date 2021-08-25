@@ -3,19 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using dto = BlackGarlic.DTO.Models.People;
+using dal = BlackGarlic.DAL.Models.People;
 
 namespace BlackGarlic.DTO.Tools.PeopleMapper
 {
     public static class AdressMapper
     {
-        public static DTO.Models.People.Adress toDTO(this DAL.Models.People.Adress a)
+        public static dto.Adress toDAL(this dal.Adress a)
         {
-            return new DTO.Models.People.Adress(a.Id, a.Street, a.Num, a.PostalCode, a.City, a.District);
+            return new dto.Adress(a.Id, a.Street, a.Num, a.PostalCode, a.City, a.District);
         }
 
-        public static DAL.Models.People.Adress toDAL(this DTO.Models.People.Adress a)
+        public static dal.Adress toDTO(this dto.Adress a)
         {
-            return new DAL.Models.People.Adress
+            return new dal.Adress
             {
                 Id = a.Id,
                 Street = a.Street,
