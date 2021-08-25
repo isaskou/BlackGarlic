@@ -61,6 +61,12 @@ namespace BlackGarlic.API
 
             services.AddScoped<ICustomerRepository, CustomerRepository>();
             services.AddScoped<ICustomerService, CustomerService>();
+
+            services.AddScoped<IAdressRepository, AdressRepository>();
+            services.AddScoped<IAdressService, AdressService>();
+
+            services.AddScoped<ICustomerAdressRepository, CustomerAdressRepository>();
+            services.AddScoped<ICustomerAdressService, CustomerAdressService>();
             #endregion
 
         }
