@@ -3,6 +3,8 @@
 	[Id] INT NOT NULL IDENTITY,
 	[Name] nvarchar(255)NOT NULL,
 	[Description] nvarchar(max) NULL,
+	[Utilisation] nvarchar(max) NULL,
+	[Ingredients] nvarchar (255) NULL,
 	[IsDisabled] Bit NOT NULL DEFAULT 0, 
 	[UnitPrice] decimal(6,2) NOT NULL,
 	[CategoryProductId] int NOT NULL,

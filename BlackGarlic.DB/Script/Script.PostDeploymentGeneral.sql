@@ -15,20 +15,20 @@ Modèle de script de post-déploiement
 
 --:r .\Script.AddDefaultRoles.sql
 
-EXEC SP_AddCategoryProduct
-    @Name='apéritif',
-    @Description='on y retrouve des tapenades, des humus, des crèmes, etc.'
+--EXEC SP_AddCategoryProduct
+--    @Name='apéritif',
+--    @Description='on y retrouve des tapenades, des humus, des crèmes, etc.'
     
-GO
+--GO
 
-EXEC SP_AddProduct
-	@Name = 'Tapenade olives et ail noir', 
-    @Description = null,
-	@IsDisabled = 0,
-	@UnitPrice = 9.99, 
-	@CategoryProductId=1,
-	@PictureUrl =null
-GO
+--EXEC SP_AddProduct
+--	@Name = 'Tapenade olives et ail noir', 
+--    @Description = null,
+--	@IsDisabled = 0,
+--	@UnitPrice = 9.99, 
+--	@CategoryProductId=1,
+--	@PictureUrl =null
+--GO
 
 INSERT INTO dbo.Role
 VALUES

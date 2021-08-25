@@ -2,6 +2,8 @@
 	@ProductId int,
 	@Name nvarchar(255),
 	@Description nvarchar(max) ,
+	@Utilisation nvarchar(max),
+	@Ingredients nvarchar(255),
 	@IsDisabled Bit , 
 	@UnitPrice decimal(6,2) ,
 	@CategoryProductId int ,
@@ -9,7 +11,7 @@
 AS
 BEGIN
 	UPDATE dbo.Product
-	SET [Name]=@Name, [Description]=@Description, 
+	SET [Name]=@Name, [Description]=@Description, [Utilisation]=@Utilisation, [Ingredients]=@Ingredients,
 	IsDisabled=@IsDisabled, UnitPrice=@UnitPrice,
 	CategoryProductId=@CategoryProductId, 
 	PictureUrl=@PictureUrl
