@@ -18,6 +18,8 @@ namespace BlackGarlic.DTO.Tools.ProductsMapper
                 Id = p.Id,
                 Name = p.Name,
                 Description = p.Description,
+                Utilisation = p.Utilisation,
+                Ingredients = p.Ingredients,
                 IsDisabled = p.IsDisabled,
                 UnitPrice = p.UnitPrice,
                 PictureUrl = p.PictureUrl
@@ -32,6 +34,8 @@ namespace BlackGarlic.DTO.Tools.ProductsMapper
                 Id = p.Id,
                 Name = p.Name,
                 Description = p.Description,
+                Utilisation = p.Utilisation,
+                Ingredients = p.Ingredients,
                 IsDisabled = p.IsDisabled,
                 UnitPrice = p.UnitPrice,
                 CategoryProductId = p.CategoryId,
