@@ -14,6 +14,7 @@ namespace BlackGarlic.DTO.Models.Products
         public string Description { get; set; }
         public string Utilisation { get; set; }
         public string Ingredients { get; set; }
+
         public bool IsDisabled { get; set; }
         public decimal UnitPrice { get; set; }
 
