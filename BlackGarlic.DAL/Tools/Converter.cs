@@ -91,6 +91,8 @@ namespace BlackGarlic.DAL.Tools
                 Id = (int)reader["Id"],
                 Name = reader["Name"].ToString(),
                 Description = reader["Description"].ToString(),
+                Utilisation = reader["Utilisation"].ToString(),
+                Ingredients = reader["Ingredients"].ToString(),
                 IsDisabled = (bool)reader["IsDisabled"],
                 UnitPrice = (decimal)reader["UnitPrice"],
                 CategoryProductId = (int)reader["CategoryProductId"],

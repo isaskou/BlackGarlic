@@ -32,7 +32,6 @@ namespace BlackGarlic.DAL.Repositories.ProductsRepo
         public IEnumerable<Product> GetAll()
         {
             Command cmd = new Command("SP_GetAllProducts", true);
-            //Command cmd = new Command("SELECT * FROM Product", false);
 
             return _connection.ExecuteReader(cmd, Converter.ProductConvert);
         }
@@ -49,6 +48,8 @@ namespace BlackGarlic.DAL.Repositories.ProductsRepo
             Command cmd = new Command("SP_AddProduct", true);
             cmd.AddParameters("Name", entity.Name);
             cmd.AddParameters("Description", entity.Description);
+            cmd.AddParameters("Utilisation", entity.Utilisation);
+            cmd.AddParameters("Ingredients", entity.Ingredients);
             cmd.AddParameters("IsDisabled", entity.IsDisabled);
             cmd.AddParameters("UnitPrice", entity.UnitPrice);
             cmd.AddParameters("CategoryProductId", entity.CategoryProductId);
@@ -63,6 +64,8 @@ namespace BlackGarlic.DAL.Repositories.ProductsRepo
             cmd.AddParameters("ProductId", entity.Id);
             cmd.AddParameters("Name", entity.Name);
             cmd.AddParameters("Description", entity.Description);
+            cmd.AddParameters("Utilisation", entity.Utilisation);
+            cmd.AddParameters("Ingredients", entity.Ingredients);
             cmd.AddParameters("IsDisabled", entity.IsDisabled);
             cmd.AddParameters("UnitPrice", entity.UnitPrice);
             cmd.AddParameters("CategoryProductId", entity.CategoryProductId);
