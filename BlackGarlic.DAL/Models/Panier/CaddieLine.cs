@@ -12,8 +12,6 @@ namespace BlackGarlic.DAL.Models.Panier
         public int Id { get; set; }
         public int ProductId { get; set; }
         public int Quantity { get; set; }
-        public int TVAAmountId { get; set; }
-        public double SubTotal { get; set; }
         public int CaddieId { get; set; }
     }
 }
