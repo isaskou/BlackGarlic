@@ -43,6 +43,13 @@ namespace BlackGarlic.DAL.Repositories.ProductsRepo
             return _connection.ExecuteReader(cmd, Converter.ProductConvert).FirstOrDefault();
         }
 
+        public IEnumerable<Product> GetProductsByCategoryId(int categoryId)
+        {
+            Command cmd = new Command("GetProductsByCategoryId", true);
+            cmd.AddParameters("@CategoryId", categoryId);
+            return _connection.ExecuteReader(cmd, Converter.ProductConvert);
+        }
+
         public int Insert(Product entity)
         {
             Command cmd = new Command("SP_AddProduct", true);

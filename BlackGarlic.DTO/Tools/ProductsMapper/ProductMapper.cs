@@ -22,6 +22,7 @@ namespace BlackGarlic.DTO.Tools.ProductsMapper
                 Ingredients = p.Ingredients,
                 IsDisabled = p.IsDisabled,
                 UnitPrice = p.UnitPrice,
+                CategoryId=p.CategoryProductId,
                 PictureUrl = p.PictureUrl
             };
         }

@@ -10,6 +10,6 @@ namespace BlackGarlic.DTO.Interfaces.IProductsServices
 {
     public interface IProductService : IService<Product>
     {
-
+        IEnumerable<Product> GetProductsByCategoryId(int categoryId);
     }
 }

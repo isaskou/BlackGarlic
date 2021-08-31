@@ -16,10 +16,12 @@ namespace BlackGarlic.DTO.Services.ProductsServices
     public class ProductService : IProductService
     {
         private IProductRepository _productRepo;
+        private ICategoryProductRepository _categoryRepo;
 
-        public ProductService(IProductRepository productRepo)
+        public ProductService(IProductRepository productRepo, ICategoryProductRepository categoryRepo)
         {
             _productRepo = productRepo;
+            _categoryRepo = categoryRepo;
         }
 
         public bool Delete(int id)
@@ -35,6 +37,17 @@ namespace BlackGarlic.DTO.Services.ProductsServices
         public Product GetById(int id)
         {
             return _productRepo.GetOne(id).toDTO();
+        }
+
+        public IEnumerable<Product> GetProductsByCategoryId(int categoryId)
+        {
+            List<Product> ListOfProducts = new List<Product>();
+            foreach (Product p in _productRepo.GetProductsByCategoryId(categoryId).Select(x=>x.toDTO()))
+            {
+                p.Category = _categoryRepo.GetOne(categoryId).toDTO();
+                ListOfProducts.Add(p);
+            }
+            return ListOfProducts;
         }
 
         public int Insert(Product entity)

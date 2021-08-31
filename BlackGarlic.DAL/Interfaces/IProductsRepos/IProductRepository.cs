@@ -10,5 +10,6 @@ namespace BlackGarlic.DAL.Interfaces.IProductsRepos
 {
     public interface IProductRepository : IRepository<Product, int>
     {
+        IEnumerable<Product> GetProductsByCategoryId(int categoryId);
     }
 }
