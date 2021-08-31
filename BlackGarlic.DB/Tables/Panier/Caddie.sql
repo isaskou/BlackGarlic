@@ -1,10 +1,9 @@
 ﻿CREATE TABLE [dbo].[Caddie]
 (
 	[Id] INT NOT NULL IDENTITY,
-	OrderDate datetime NOT NULL,
+	OrderDate datetime NOT NULL DEFAULT GETDATE(),
 	CustomerId int NOT NULL,
-	ShipAmountId int NULL,
-	TotalCaddie decimal(6,2) NOT NULL,
+	ShipAmountId int NOT NULL ,
 
 	CONSTRAINT PK_CaddieId PRIMARY KEY (Id),
 

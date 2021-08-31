@@ -41,9 +41,9 @@ EXEC SP_AddCategoryProduct
 EXEC SP_AddProduct
 	@Name = 'Ail noir tête entière bio', 
   @Description = 'Tête d’ail noir bio entièrement produite et transformée dans le Gers (environ 50g).',
-  @Utilisation = '"L’ail noir bio s’invite dans de nombreuses préparations, mais peut également être consommé nature.
+  @Utilisation = 'L’ail noir bio s’invite dans de nombreuses préparations, mais peut également être consommé nature.
 En sauce, marinade, en purée ou en fines lamelles dans vos plats de pâtes. Il s’associe avec tous les types de viande, la charcuterie, le foie gras, les poissons fins (sole, lotte, bar) et les crustacés.
-Pour les amateurs de sucré, il est idéal pour accompagner le chocolat et les agrumes."',
+Pour les amateurs de sucré, il est idéal pour accompagner le chocolat et les agrumes.',
 @Ingredients = 'Ail noir 100%',
 	@IsDisabled = 0,
 	@UnitPrice = 8.50, 
@@ -178,12 +178,12 @@ INSERT INTO ShipAmount
         ('Hainaut', 2.99)
 GO
 
-INSERT INTO TVAAmount
-    VALUES
-        (0.06),
-        (0.12),
-        (0.21)
-GO
+--INSERT INTO TVAAmount
+--    VALUES
+--        (0.06),
+--        (0.12),
+--        (0.21)
+--GO
 
 EXEC SP_AddCustomer
     @CompanyName = 'AZEMBAERT',

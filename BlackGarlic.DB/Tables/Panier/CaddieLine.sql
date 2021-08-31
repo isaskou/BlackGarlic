@@ -2,9 +2,7 @@
 (
 	[Id] INT NOT NULL IDENTITY,
 	ProductId int NOT NULL,
-	Quantity int NOT NULL, 
-	TVAAmountId int NOT NULL,
-	SubTotal decimal(5,2) NOT NULL,
+	Quantity int NOT NULL DEFAULT 0, 
 	CaddieId int NOT NULL,
 
 	CONSTRAINT PK_CaddiLineId PRIMARY KEY (Id),
@@ -17,7 +15,7 @@
 		FOREIGN KEY (ProductId)
 		references Product(Id),
 
-	CONSTRAINT FK_CaddieLine_TVAAmount
-		FOREIGN KEY (TVAAmountId)
-		references TVAAmount(Id)
+	CONSTRAINT CK_QuantityUpToZero
+		CHECK (Quantity>=0)
+
 )

@@ -85,7 +85,6 @@
     <Build Include="Tables\Panier\CaddieLine.sql" />
     <Build Include="Tables\Panier\Caddie.sql" />
     <Build Include="Tables\Panier\ShipAmount.sql" />
-    <Build Include="Tables\Panier\TVAAmount.sql" />
     <Build Include="Tables\People\CustomersAdresses.sql" />
     <Build Include="StoredProcedure\Products\CRUDCategoryProduct\SP_AddCategoryProduct.sql" />
     <Build Include="StoredProcedure\Products\CRUDCategoryProduct\SP_GetAllCategoryProduct.sql" />
@@ -122,6 +121,7 @@
     <Build Include="StoredProcedure\People\Adress\SP_UpdateAdress.sql" />
     <Build Include="StoredProcedure\People\Adress\SP_GetAdressByCustomerId.sql" />
     <Build Include="StoredProcedure\Products\CRUDProduct\GetProductsByCategoryId.sql" />
+    <Build Include="StoredProcedure\Panier\InsertCaddieLine.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="BlackGarlic.DB.publish.xml" />
