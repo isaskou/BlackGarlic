@@ -63,7 +63,7 @@ namespace BlackGarlic.API.Controllers.Products
         }
 
         [HttpGet]
-        [Route("api/product/category/{id}")]
+        [Route("api/Product/category/{id}")]
         public IActionResult GetProductsByCategoryId(int id)
         {
             try

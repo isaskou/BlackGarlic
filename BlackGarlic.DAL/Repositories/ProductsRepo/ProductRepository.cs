@@ -45,7 +45,8 @@ namespace BlackGarlic.DAL.Repositories.ProductsRepo
 
         public IEnumerable<Product> GetProductsByCategoryId(int categoryId)
         {
-            Command cmd = new Command("GetProductsByCategoryId", true);
+            Command cmd = new Command("GetProductsByCategoryId" +
+                "", true);
             cmd.AddParameters("@CategoryId", categoryId);
             return _connection.ExecuteReader(cmd, Converter.ProductConvert);
         }

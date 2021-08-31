@@ -36,7 +36,13 @@ namespace BlackGarlic.DTO.Services.ProductsServices
 
         public Product GetById(int id)
         {
-            return _productRepo.GetOne(id).toDTO();
+            Product result = null;
+            result = _productRepo.GetOne(id).toDTO();
+            if (result?.CategoryId != 0)
+            {
+                result.Category = _categoryRepo.GetOne(result.CategoryId).toDTO();
+            }
+            return result;
         }
 
         public IEnumerable<Product> GetProductsByCategoryId(int categoryId)

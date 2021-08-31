@@ -99,7 +99,7 @@ GO
 
 EXEC SP_AddProduct
 	@Name = 'Coffret découverte L’Ail Noir', 
-  @Description = 'Coffret dégustation ail noir comprenant une tête entière, de la pâte et du miel à l’ail noir bio AB.',
+  @Description = 'Coffret dégustation comprenant une tête entière, de la pâte et du miel à l’ail noir bio AB.',
   @Utilisation = 'Tous les bienfaits et plaisirs de l’ail noir réunis dans un coffret découverte, pour déguster ou faire déguster l’ail noir bio, ses vertus naturelles et ses nombreuses utilisations en cuisine.
 
 Vous trouverez dans votre coffret découverte Ail Noir en toile de jute L’étuverie :
@@ -139,7 +139,7 @@ Une moutarde de caractère, fine et forte avec son beau parfum d’ail noir.',
 	@IsDisabled = 0,
 	@UnitPrice = 7.00, 
 	@CategoryProductId=3,
-	@PictureUrl ='https://www.letuverie.com/wp-content/uploads/2021/08/IMG_1284-2-1-600x740.jpg'
+	@PictureUrl ='https://locavor.fr/data/produits/5/118232/moutarde-a-l-ancienne-a-l-ail-noir-118232-1592335472-1.jpg'
 GO
 
 
