@@ -1,8 +1,10 @@
 ﻿CREATE PROCEDURE [dbo].[SP_GetAllProductFromCategoryProduct]
-	@categoryName nvarchar(255)
+	@categoryName nvarchar(255),
+	@idCategory int,
+	@idProduct int
 AS
-	SELECT p.Name, p.Description, p.PictureUrl, p.UnitPrice, p.IsDisabled, cp.Name
+	SELECT p.*, cp.*
 	FROM Product p
 		JOIN CategoryProduct cp ON p.CategoryProductId=cp.Id
-	Where cp.Name=@categoryName
+	Where p.CategoryProductId=@idCategory
 RETURN 0
