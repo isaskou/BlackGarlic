@@ -62,6 +62,26 @@ namespace BlackGarlic.API.Controllers.Products
             }
         }
 
+        [HttpGet]
+        [Route("api/product/category/{id}")]
+        public IActionResult GetProductsByCategoryId(int id)
+        {
+            try
+            {
+                return Ok(_productService.GetProductsByCategoryId(id));
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, new
+                {
+                    Method = "GetProductsByCategoryId",
+                    Message = ex.Message
+                });
+
+            }
+
+        }
+
         // POST api/<ProductController>
         [HttpPost]
         public IActionResult Post([FromBody] Product product)
