@@ -114,27 +114,24 @@ namespace BlackGarlic.DAL.Tools
         #endregion
 
         #region Panier
-        public static Caddie CaddieConvert(IDataReader reader)
+        public static Command CommandConvert(IDataReader reader)
         {
-            return new Caddie
+            return new Command
             {
                 Id = (int)reader["Id"],
                 OrderDate = (DateTime)reader["OrderDate"],
                 CustomerId = (int)reader["CustomerId"],
                 ShipAmountId = (int)reader["ShipAmountId"],
-                TotalCaddie = (double)reader["TotalCaddie"]
             };
         }
 
-        public static CaddieLine CaddieLineConvert(IDataReader reader)
+        public static CommandProduct CommandProductConvert(IDataReader reader)
         {
-            return new CaddieLine
+            return new CommandProduct
             {
                 Id = (int)reader["Id"],
                 ProductId = (int)reader["ProductId"],
                 Quantity = (int)reader["Quantity"],
-                TVAAmountId = (int)reader["TVAAmountId"],
-                SubTotal = (double)reader["SubTotal"],
                 CaddieId = (int)reader["CaddieId"]
             };
         }
@@ -148,16 +145,6 @@ namespace BlackGarlic.DAL.Tools
                 Amount = (double)reader["Amount"]
             };
         }
-
-        public static TVAAmount TVAAmountConvert(IDataReader reader)
-        {
-            return new TVAAmount
-            {
-                Id = (int)reader["Id"],
-                TVAType = (double)reader["TVAType"]
-            };
-        }
-
         #endregion
     }
 }

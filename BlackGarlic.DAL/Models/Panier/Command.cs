@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BlackGarlic.DAL.Models.Panier
 {
-    public class Caddie
+    public class Command
     {
         public int Id { get; set; }
         public DateTime OrderDate { get; set; }
