@@ -121,6 +121,7 @@
     <Build Include="StoredProcedure\People\Adress\SP_AddAdress.sql" />
     <Build Include="StoredProcedure\People\Adress\SP_UpdateAdress.sql" />
     <Build Include="StoredProcedure\People\Adress\SP_GetAdressByCustomerId.sql" />
+    <Build Include="StoredProcedure\Products\CRUDProduct\GetProductsByCategoryId.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="BlackGarlic.DB.publish.xml" />
