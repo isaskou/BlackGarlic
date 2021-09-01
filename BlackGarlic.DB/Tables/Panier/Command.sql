@@ -1,7 +1,7 @@
 ﻿CREATE TABLE [dbo].[Command]
 (
 	[Id] INT NOT NULL IDENTITY,
-	DateOfCommand datetime NOT NULL,
+	DateOfCommand datetime NOT NULL DEFAULT GetDate(),
 	CustomerId INT NOT NULL,
 	CustomerAdressId INT NOT NULL,
 
