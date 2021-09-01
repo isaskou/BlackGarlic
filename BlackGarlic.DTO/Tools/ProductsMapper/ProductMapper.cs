@@ -11,7 +11,7 @@ namespace BlackGarlic.DTO.Tools.ProductsMapper
 {
     public static class ProductMapper
     {
-        public static dto.Product toDTO(this dal.Product p)
+        public static dto.Product toDAL(this dal.Product p)
         {
             return new dto.Product
             {
@@ -27,7 +27,7 @@ namespace BlackGarlic.DTO.Tools.ProductsMapper
             };
         }
 
-        public static dal.Product toDAL(this dto.Product p)
+        public static dal.Product toDTO(this dto.Product p)
         {
             if (p == null) return null;
             return new dal.Product
