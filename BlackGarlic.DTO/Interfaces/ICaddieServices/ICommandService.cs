@@ -10,5 +10,6 @@ namespace BlackGarlic.DTO.Interfaces.ICaddieServices
 {
     public interface ICommandService : IInsertService<Command>, IGetOneService<CommandDetail>, IGetAllService<Command>
     {
+        int InsertCommandProduct(CommandProduct Value);
     }
 }

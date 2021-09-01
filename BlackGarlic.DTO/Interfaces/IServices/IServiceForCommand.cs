@@ -22,7 +22,7 @@ namespace BlackGarlic.DTO.Interfaces.IServices
 
     public interface IInsertService<T>
     {
-        int Insert(T Value);
+        int InsertCommand(T Value);
     }
 
     public interface IUpdateService<T>

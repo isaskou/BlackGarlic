@@ -50,7 +50,7 @@ namespace BlackGarlic.DTO.Services.CaddieService
             return cd;
         }
 
-        public int Insert(Command Value)
+        public int InsertCommand(Command Value)
         {
             int commandId = _commandRepo.Insert(Value.toDTO());
             if (commandId > 0)
@@ -62,6 +62,11 @@ namespace BlackGarlic.DTO.Services.CaddieService
                 }
             }
             return commandId;
+        }
+
+        public int InsertCommandProduct(CommandProduct Value)
+        {
+            return _commandRepo.InsertCommandProduct(Value.toDTO());
         }
     }
 }

@@ -14,7 +14,7 @@ namespace BlackGarlic.API.Controllers.Caddie
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+    //[Authorize]
     public class CommandController : ControllerBase
     {
         ICommandService _commandService;
@@ -49,7 +49,7 @@ namespace BlackGarlic.API.Controllers.Caddie
         {
             try
             {
-                return Ok(_commandService.Insert(cmd));
+                return Ok(_commandService.InsertCommand(cmd));
             }
             catch (Exception ex)
             {
@@ -60,6 +60,25 @@ namespace BlackGarlic.API.Controllers.Caddie
                     Message = ex.Message
                 });
             }
+        }
+
+        [HttpPost]
+        public IActionResult InsertCommandProduct([FromBody]CommandProduct cp)
+        {
+            try
+            {
+                return Ok(_commandService.InsertCommandProduct(cp));
+            }
+            catch (Exception ex)
+            {
+
+                return StatusCode(StatusCodes.Status500InternalServerError, new
+                {
+                    Method = "InsertNewCommandProduct",
+                    Message = ex.Message
+                });
+            }
+
         }
     }
 }
