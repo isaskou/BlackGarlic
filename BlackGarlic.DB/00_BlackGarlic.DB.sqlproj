@@ -111,7 +111,7 @@
     <Build Include="StoredProcedure\Panier\GetCommandById.sql" />
     <Build Include="StoredProcedure\Panier\InsertCommand.sql" />
     <Build Include="StoredProcedure\Panier\InsertCommandProduct.sql" />
-    <Build Include="StoredProcedure\People\Adress\SP_GetAdressForUser.sql" />
+    <Build Include="StoredProcedure\People\Adress\SP_GetAdressesForCustomer.sql" />
     <Build Include="StoredProcedure\People\Customer\SP_GetCustomerByMailAndPasswordMatch.sql" />
     <Build Include="StoredProcedure\People\Customer\SP_GetRoleById.sql" />
     <Build Include="StoredProcedure\People\Customer\SP_RegisterCustomer.sql" />

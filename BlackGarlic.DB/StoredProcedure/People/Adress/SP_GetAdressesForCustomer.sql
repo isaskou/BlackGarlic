@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [dbo].[SP_GetAdressForUser]
+﻿CREATE PROCEDURE [dbo].[SP_GetAdressesForCustomer]
 	@id int
 AS
 	BEGIN

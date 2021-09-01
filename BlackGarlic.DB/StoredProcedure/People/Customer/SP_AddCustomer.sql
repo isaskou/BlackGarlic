@@ -12,7 +12,7 @@ BEGIN
 	DECLARE @IdRole int
 	SET @IdRole = (SELECT Id FROM [Role] WHERE Name = 'Client')
     INSERT INTO Customer
-		(Firstname, Lastname,CompanyName, Phone, Email,
+		(FirstName, LastName,CompanyName, Phone, Email,
 		[Password], Salt, RoleId)
 	OUTPUT inserted.Id
 	VALUES(@fn, @ln, @company, @Phone, @Email, @Pw, '0000000', 2 )

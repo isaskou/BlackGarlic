@@ -14,5 +14,5 @@ AS
 		UPDATE Customer
 		SET FirstName = @fn, LastName = @ln, CompanyName=@company, Email=@Email, 
 		[Password] = HASHBYTES('SHA2_512',@salt + @Pw), Phone=@Phone, Salt = @salt
-		WHERE Id=@CustomerId
+		WHERE Id=@customerId
 	END
