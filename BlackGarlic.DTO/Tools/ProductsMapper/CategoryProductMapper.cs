@@ -12,7 +12,7 @@ namespace BlackGarlic.DTO.Tools.ProductsMapper
 {
     public static class CategoryProductMapper
     {
-        public static dto.CategoryProduct toDTO(this dal.CategoryProduct cp)
+        public static dto.CategoryProduct toDAL(this dal.CategoryProduct cp)
         {
             return new dto.CategoryProduct
             {
@@ -22,7 +22,7 @@ namespace BlackGarlic.DTO.Tools.ProductsMapper
             };
         }
 
-        public static dal.CategoryProduct toDAL(this dto.CategoryProduct cp)
+        public static dal.CategoryProduct toDTO(this dto.CategoryProduct cp)
         {
             return new dal.CategoryProduct
             {

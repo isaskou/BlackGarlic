@@ -31,7 +31,13 @@ namespace BlackGarlic.DTO.Services.ProductsServices
 
         public IEnumerable<Product> GetAll()
         {
-            return _productRepo.GetAll().Select(p => p.toDAL());
+            List<Product> ListOfProducts = new List<Product>();
+            foreach (Product p in _productRepo.GetAll().Select(x=>x.toDAL()))
+            {
+                p.Category = _categoryRepo.GetOne(p.CategoryId).toDAL();
+                ListOfProducts.Add(p);
+            }
+            return ListOfProducts;
         }
 
         public Product GetById(int id)
@@ -40,7 +46,7 @@ namespace BlackGarlic.DTO.Services.ProductsServices
             result = _productRepo.GetOne(id).toDAL();
             if (result?.CategoryId != 0)
             {
-                result.Category = _categoryRepo.GetOne(result.CategoryId).toDTO();
+                result.Category = _categoryRepo.GetOne(result.CategoryId).toDAL();
             }
             return result;
         }
@@ -50,7 +56,7 @@ namespace BlackGarlic.DTO.Services.ProductsServices
             List<Product> ListOfProducts = new List<Product>();
             foreach (Product p in _productRepo.GetProductsByCategoryId(categoryId).Select(x=>x.toDAL()))
             {
-                p.Category = _categoryRepo.GetOne(categoryId).toDTO();
+                p.Category = _categoryRepo.GetOne(categoryId).toDAL();
                 ListOfProducts.Add(p);
             }
             return ListOfProducts;

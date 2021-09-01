@@ -26,27 +26,27 @@ namespace BlackGarlic.DTO.Services.ProductsServices
 
         public IEnumerable<CategoryProduct> GetAll()
         {
-            return _repo.GetAll().Select(c => c.toDTO());
+            return _repo.GetAll().Select(c => c.toDAL());
         }
 
         public CategoryProduct GetById(int id)
         {
-            return _repo.GetOne(id).toDTO();
+            return _repo.GetOne(id).toDAL();
         }
 
         public CategoryProduct GetByName(string name)
         {
-            return _repo.GetByName(name).toDTO();
+            return _repo.GetByName(name).toDAL();
         }
 
         public int Insert(CategoryProduct entity)
         {
-            return _repo.Insert(entity.toDAL());
+            return _repo.Insert(entity.toDTO());
         }
 
         public void Update(CategoryProduct entity)
         {
-             _repo.Update(entity.toDAL());
+             _repo.Update(entity.toDTO());
         }
     }
 }
