@@ -103,7 +103,7 @@
     <Build Include="StoredProcedure\People\Customer\SP_UpdateCustomerAdress.sql" />
     <Build Include="StoredProcedure\People\Adress\SP_AddAdress.sql" />
     <Build Include="StoredProcedure\People\Adress\SP_UpdateAdress.sql" />
-    <Build Include="StoredProcedure\People\Adress\SP_GetAdressByCustomerId.sql" />
+    <Build Include="StoredProcedure\People\Adress\SP_GetAdressByCustomerAdressId.sql" />
     <Build Include="StoredProcedure\Products\CRUDProduct\GetProductsByCategoryId.sql" />
     <Build Include="Tables\Panier\CommandProduct.sql" />
     <Build Include="Tables\Panier\Command.sql" />
@@ -111,12 +111,14 @@
     <Build Include="StoredProcedure\Panier\GetCommandById.sql" />
     <Build Include="StoredProcedure\Panier\InsertCommand.sql" />
     <Build Include="StoredProcedure\Panier\InsertCommandProduct.sql" />
-    <Build Include="StoredProcedure\People\Adress\SP_GetAdressesForCustomer.sql" />
+    <Build Include="StoredProcedure\People\Adress\SP_GetAllAdressesbyCustomerId.sql" />
     <Build Include="StoredProcedure\People\Customer\SP_GetCustomerByMailAndPasswordMatch.sql" />
     <Build Include="StoredProcedure\People\Customer\SP_GetRoleById.sql" />
     <Build Include="StoredProcedure\People\Customer\SP_RegisterCustomer.sql" />
     <Build Include="StoredProcedure\People\Customer\SP_UpdateCustomerWithoutPassord.sql" />
     <Build Include="StoredProcedure\People\Customer\SP_FindEmail.sql" />
+    <Build Include="StoredProcedure\People\Adress\SP_GetAdressById.sql" />
+    <Build Include="StoredProcedure\People\Adress\SP_GetAllAdresses.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="BlackGarlic.DB.publish.xml" />
