@@ -69,6 +69,8 @@ namespace BlackGarlic.API
 
             services.AddScoped<ICustomerAdressRepository, CustomerAdressRepository>();
             services.AddScoped<ICustomerAdressService, CustomerAdressService>();
+
+            services.AddScoped<IRoleRepository, RoleRepository>();
             #endregion
 
             #region Caddie

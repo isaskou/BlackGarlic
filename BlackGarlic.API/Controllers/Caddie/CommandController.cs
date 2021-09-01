@@ -25,7 +25,9 @@ namespace BlackGarlic.API.Controllers.Caddie
         }
 
         // GET api/<CommandController>/5
-        [HttpGet("{id}")]
+        [HttpGet]
+        [Route("api/Command/{id}")]
+
         public IActionResult GetCommandById(int id)
         {
             try
@@ -45,6 +47,8 @@ namespace BlackGarlic.API.Controllers.Caddie
 
         // POST api/<CommandController>
         [HttpPost]
+        [Route("api/Command/Insert")]
+
         public IActionResult InsertNewCommand([FromBody] Command cmd)
         {
             try
@@ -63,6 +67,8 @@ namespace BlackGarlic.API.Controllers.Caddie
         }
 
         [HttpPost]
+        [Route("api/Command/InsertCommandProduct")]
+
         public IActionResult InsertCommandProduct([FromBody]CommandProduct cp)
         {
             try

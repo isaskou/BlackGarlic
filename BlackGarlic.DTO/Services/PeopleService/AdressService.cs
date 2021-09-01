@@ -26,7 +26,7 @@ namespace BlackGarlic.DTO.Services.PeopleService
 
         public IEnumerable<Adress> GetAdressesByCustomerId(int id)
         {
-            List<Adress> adresses= _adressRepository.GetAdressesByCustomerId(id).Select(x => x.toDAL()).ToList();
+            List<Adress> adresses= _adressRepository.GetAllAdressesByCustomerId(id).Select(x => x.toDAL()).ToList();
             return adresses;
         }
 

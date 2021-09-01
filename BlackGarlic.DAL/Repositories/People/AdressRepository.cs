@@ -23,31 +23,56 @@ namespace BlackGarlic.DAL.Repositories.People
             throw new NotImplementedException();
         }
 
-        public IEnumerable<Adress> GetAdressesByCustomerId(int id)
+        public Adress GetAdressByCustomerAdressId(int id)
         {
-            Command cmd = new Command("SP_GetAdressesForCustomer", true);
+            Command cmd = new Command("SP_GetAdressByCustomerAdressId", true);
+            cmd.AddParameters("CustomerAdressId", id);
+            return _connection.ExecuteReader(cmd, Converter.AdressConvert).SingleOrDefault();
+        }
+
+        public IEnumerable<Adress> GetAllAdressesByCustomerId(int id)
+        {
+            Command cmd = new Command("SP_GetAllAdressesByCustomerId", true);
             cmd.AddParameters("@id", id);
             return _connection.ExecuteReader(cmd, Converter.AdressConvert);
         }
 
         public IEnumerable<Adress> GetAll()
         {
-            throw new NotImplementedException();
+            Command cmd = new Command("SP_GetAllAdresses", true);
+            return _connection.ExecuteReader(cmd, Converter.AdressConvert);
         }
 
         public Adress GetOne(int id)
         {
-            throw new NotImplementedException();
+            Command cmd = new Command("SP_GetAdressById", true);
+            cmd.AddParameters("id", id);
+            return _connection.ExecuteReader(cmd, Converter.AdressConvert).SingleOrDefault();
         }
 
         public int Insert(Adress entity)
         {
-            throw new NotImplementedException();
+            Command cmd = new Command("SP_AddAdress", true);
+            cmd.AddParameters("@Street", entity.Street);
+            cmd.AddParameters("@Num", entity.Num);
+            cmd.AddParameters("PostalCode", entity.PostalCode);
+            cmd.AddParameters("City", entity.City);
+            cmd.AddParameters("District", entity.District);
+
+            return (int)_connection.ExecuteScalar(cmd);
         }
 
         public void Update(Adress entity)
         {
-            throw new NotImplementedException();
+            Command cmd = new Command("SP_UpdateAdress", true);
+            cmd.AddParameters("@Street", entity.Street);
+            cmd.AddParameters("@Num", entity.Num);
+            cmd.AddParameters("PostalCode", entity.PostalCode);
+            cmd.AddParameters("City", entity.City);
+            cmd.AddParameters("District", entity.District);
+
+            _connection.ExecuteNonQuery(cmd);
+
         }
     }
 }

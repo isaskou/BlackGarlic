@@ -48,7 +48,9 @@ namespace BlackGarlic.API.Controllers.People
         }
 
         // GET api/<CustomerController>/5
-        [HttpGet("{id}")]
+        [HttpGet]
+        [Route("api/Customer/{id}")]
+
         public IActionResult GetById(int id)
         {
             try

@@ -10,6 +10,8 @@ namespace BlackGarlic.DAL.Interfaces.IPeopleRepos
 {
     public interface IAdressRepository : IRepository<Adress, int>
     {
-        IEnumerable<Adress> GetAdressesByCustomerId(int id);
+        IEnumerable<Adress> GetAllAdressesByCustomerId(int id);
+
+        Adress GetAdressByCustomerAdressId(int id);
     }
 }

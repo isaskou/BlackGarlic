@@ -38,7 +38,7 @@ namespace BlackGarlic.DTO.Services.CaddieService
             CommandDetail cd = new CommandDetail();
             Command cmd = _commandRepo.GetOne(Id).toDAL();
             cd.DateOfCommand = cmd.DateOfCommand;
-            cd.Adress = _adressRepo.GetAdressByCustomerId(cmd.CustommerAdressId).toDAL();
+            cd.Adress = _adressRepo.GetAdressByCustomerAdressId(cmd.Id).toDAL();
             cd.Customer = _customerRepo.GetOne(cmd.CustomerId).toDAL();
             cd.CommandProducts = _commandRepo.GetAllCommandProductByCommandId(Id).Select(x => x.toDAL()).ToList();
             
