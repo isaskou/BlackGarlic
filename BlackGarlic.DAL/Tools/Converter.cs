@@ -32,7 +32,10 @@ namespace BlackGarlic.DAL.Tools
             {
                 Id = (int)reader["Id"],
                 CompanyName = reader["CompanyName"].ToString(),
-                PersonId = (int)reader["PersonId"],
+                FirstName = reader["FirstName"].ToString(),
+                LastName = reader["LastName"].ToString(),
+                Email = reader["Email"].ToString(),
+                RoleId = (int)reader["RoleId"],
                 Phone = (int)reader["Phone"]
             };
         }
@@ -44,19 +47,6 @@ namespace BlackGarlic.DAL.Tools
                 Id = (int)reader["Id"],
                 CustomerId = (int)reader["CustomerId"],
                 AdressId = (int)reader["AdressId"]
-            };
-        }
-
-        public static Person PersonConvert(IDataReader reader)
-        {
-            return new Person
-            {
-                Id = (int)reader["Id"],
-                FirstName = reader["FirstName"].ToString(),
-                LastName = reader["LastName"].ToString(),
-                Email = reader["Email"].ToString(),
-                //Password=reader["Password"].ToString(),
-                RoleId = (int)reader["RoleId"]
             };
         }
 

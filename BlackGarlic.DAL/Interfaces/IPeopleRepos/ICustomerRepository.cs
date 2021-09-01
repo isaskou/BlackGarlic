@@ -12,8 +12,13 @@ namespace BlackGarlic.DAL.Interfaces.IPeopleRepos
     {
 
         Customer GetCustomerByMail(string email);
+        Customer GetCustomerByMailAndPasswordMatch(string email, string password);
 
-        IEnumerable<Customer> GetCustomersByName(string name);
+        IEnumerable<Customer> GetCustomersByLastName(string name);
+
+        void UpdateCustomerWithoutPassword(Customer entity);
+
+        bool FindEmail(string email, int id);
 
 
 

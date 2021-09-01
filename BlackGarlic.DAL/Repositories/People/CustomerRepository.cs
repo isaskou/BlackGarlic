@@ -23,6 +23,16 @@ namespace BlackGarlic.DAL.Repositories.People
             throw new NotImplementedException();
         }
 
+        public bool FindEmail(string email, int id)
+        {
+            Command cmd = new Command("SP_FindEmail", true);
+            cmd.AddParameters("@Email", email);
+            cmd.AddParameters("@UserId", id);
+            int? exist = (int?)_connection.ExecuteScalar(cmd);
+            if (exist > 0) return true;
+            return false;
+        }
+
         public IEnumerable<Customer> GetAll()
         {
             Command cmd = new Command("SP_GetAllCustomers", true);
@@ -37,10 +47,19 @@ namespace BlackGarlic.DAL.Repositories.People
             return _connection.ExecuteReader(cmd, Converter.CustomerConvert).FirstOrDefault();
         }
 
-        public IEnumerable<Customer> GetCustomersByName(string name)
+        public Customer GetCustomerByMailAndPasswordMatch(string email, string password)
         {
-            Command cmd = new Command("SP_GetCustomerByPersonName", true);
-            cmd.AddParameters("PersonLastName", name);
+            Command cmd = new Command("SP_GetCustomerByMailAndPasswordMatch", true);
+            cmd.AddParameters("@email", email);
+            cmd.AddParameters("@password", password);
+
+            return _connection.ExecuteReader(cmd, Converter.CustomerConvert).SingleOrDefault();
+        }
+
+        public IEnumerable<Customer> GetCustomersByLastName(string name)
+        {
+            Command cmd = new Command("SP_GetCustomerByLastName", true);
+            cmd.AddParameters("@ln", name);
             return _connection.ExecuteReader(cmd, Converter.CustomerConvert);
         }
 
@@ -53,10 +72,9 @@ namespace BlackGarlic.DAL.Repositories.People
 
         public int Insert(Customer entity)
         {
-            Command cmd = new Command("SP_AddCustomer", true);
-            cmd.AddParameters("CompanyName", entity.CompanyName);
-            cmd.AddParameters("PersonId", entity.PersonId);
-            cmd.AddParameters("Phone", entity.Phone);
+            Command cmd = new Command("SP_RegisterCustomer", true);
+            cmd.AddParameters("Email", entity.Email);
+            cmd.AddParameters("Password", entity.Password);
             return (int)_connection.ExecuteScalar(cmd);
 
         }
@@ -64,11 +82,29 @@ namespace BlackGarlic.DAL.Repositories.People
         public void Update(Customer entity)
         {
             Command cmd = new Command("SP_UpdateCustomer", true);
-            cmd.AddParameters("CompanyName", entity.CompanyName);
-            cmd.AddParameters("CustomerId", entity.Id);
-            cmd.AddParameters("Phone", entity.Phone);
+            cmd.AddParameters("customerId", entity.Id);
+            cmd.AddParameters("@fn", entity.FirstName);
+            cmd.AddParameters("@ln", entity.LastName);
+            cmd.AddParameters("@company", entity.CompanyName);
+            cmd.AddParameters("@Email", entity.Email);
+            cmd.AddParameters("@Pw", entity.Password);
+            cmd.AddParameters("@Phone", entity.Phone);
 
             _connection.ExecuteNonQuery(cmd);
+        }
+
+        public void UpdateCustomerWithoutPassword(Customer entity)
+        {
+            Command cmd = new Command("SP_UpdateCustomerWithoutPassord", true);
+            cmd.AddParameters("customerId", entity.Id);
+            cmd.AddParameters("@fn", entity.FirstName);
+            cmd.AddParameters("@ln", entity.LastName);
+            cmd.AddParameters("@company", entity.CompanyName);
+            cmd.AddParameters("@Email", entity.Email);
+            cmd.AddParameters("@Phone", entity.Phone);
+
+            _connection.ExecuteNonQuery(cmd);
+
         }
     }
 }
