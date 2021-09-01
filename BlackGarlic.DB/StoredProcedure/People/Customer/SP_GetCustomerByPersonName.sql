@@ -1,8 +1,7 @@
-﻿CREATE PROCEDURE [dbo].[SP_GetCustomerByPersonName]
-	@PersonLastName nvarchar(50)
+﻿CREATE PROCEDURE [dbo].[SP_GetCustomerByLastName]
+	@ln nvarchar(50)
 AS
-		SELECT p.FirstName, p.LastName, p.Email, c.CompanyName, c.Phone
-		FROM Person p
-		Join Customer c ON p.Id = c.PersonId
-		Where p.LastName = @PersonLastName
+		SELECT *
+		FROM Customer
+		Where LastName = @ln
 RETURN 0

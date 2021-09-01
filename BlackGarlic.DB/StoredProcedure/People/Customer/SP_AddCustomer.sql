@@ -1,14 +1,20 @@
 ﻿CREATE PROCEDURE [dbo].[SP_AddCustomer]
-	@CompanyName nvarchar(255),
-	@PersonId int, 
-	@Phone int
+	
+	@fn NVARCHAR(50),
+	@ln NVARCHAR(50),
+	@company nvarchar(255),
+	@Email NVARCHAR(50),
+	@Pw NVARCHAR(50),
+	@Phone NVARCHAR(10)
 AS
-	BEGIN
-		INSERT INTO Customer(
-			[CompanyName], [PersonId], [Phone]
-		)
-		OUTPUT inserted.Id
-		VALUES(
-			@CompanyName, @PersonId, @Phone
-		)
-	END
+BEGIN
+
+	DECLARE @IdRole int
+	SET @IdRole = (SELECT Id FROM [Role] WHERE Name = 'Client')
+    INSERT INTO Customer
+		(Firstname, Lastname,CompanyName, Phone, Email,
+		[Password], Salt, RoleId)
+	OUTPUT inserted.Id
+	VALUES(@fn, @ln, @company, @Phone, @Email, @Pw, '0000000', 2 )
+END
+

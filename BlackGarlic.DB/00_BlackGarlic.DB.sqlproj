@@ -67,8 +67,6 @@
     <Folder Include="StoredProcedure\Products\CRUDCategoryProduct" />
     <Folder Include="StoredProcedure\Products\CRUDProduct" />
     <Folder Include="StoredProcedure\People" />
-    <Folder Include="StoredProcedure\People\Person" />
-    <Folder Include="Fonctions" />
     <Folder Include="VIews" />
     <Folder Include="StoredProcedure\Panier" />
     <Folder Include="StoredProcedure\People\Customer" />
@@ -77,7 +75,6 @@
   <ItemGroup>
     <Build Include="Tables\People\Adress.sql" />
     <Build Include="Tables\People\Customer.sql" />
-    <Build Include="Tables\People\Person.sql" />
     <Build Include="Tables\People\Provider.sql" />
     <Build Include="Tables\People\Role.sql" />
     <Build Include="Tables\Products\Product.sql" />
@@ -94,17 +91,7 @@
     <Build Include="StoredProcedure\Products\CRUDProduct\SP_GetAllProducts.sql" />
     <Build Include="StoredProcedure\Products\CRUDProduct\SP_GetProductById.sql" />
     <Build Include="StoredProcedure\Products\CRUDProduct\SP_UpdateProduct.sql" />
-    <Build Include="StoredProcedure\People\Person\SP_InsertPerson.sql" />
-    <Build Include="StoredProcedure\People\Person\SP_UpdatePerson.sql" />
-    <Build Include="StoredProcedure\People\Person\SP_GetAllPerson.sql" />
-    <Build Include="Fonctions\SF_GenerateSalt.sql" />
     <Build Include="VIews\V_GetRandom.sql" />
-    <Build Include="Fonctions\SF_GeneratePWD.sql" />
-    <Build Include="StoredProcedure\People\Person\SP_CheckPassword.sql" />
-    <Build Include="StoredProcedure\People\Person\SP_GetPersonById.sql" />
-    <Build Include="StoredProcedure\People\Person\SP_GetPersonByName.sql" />
-    <Build Include="StoredProcedure\People\Person\SP_GetPersonByMail.sql" />
-    <Build Include="StoredProcedure\People\Person\SP_FindEmail.sql" />
     <Build Include="StoredProcedure\People\Customer\SP_AddCustomer.sql" />
     <Build Include="StoredProcedure\People\Customer\SP_AddCustomerAdress.sql" />
     <Build Include="StoredProcedure\People\Customer\SP_GetAllCustomersWithAdress.sql" />
@@ -112,7 +99,6 @@
     <Build Include="StoredProcedure\People\Customer\SP_GetCustomerByMail.sql" />
     <Build Include="StoredProcedure\People\Customer\SP_GetCustomerByPersonName.sql" />
     <Build Include="StoredProcedure\People\Customer\SP_UpdateCustomer.sql" />
-    <Build Include="StoredProcedure\People\Person\SP_UpdatePersonWithoutPassword.sql" />
     <Build Include="StoredProcedure\People\Customer\SP_GetAllCustomers.sql" />
     <Build Include="StoredProcedure\People\Customer\SP_UpdateCustomerAdress.sql" />
     <Build Include="StoredProcedure\People\Adress\SP_AddAdress.sql" />
@@ -125,6 +111,12 @@
     <Build Include="StoredProcedure\Panier\GetCommandById.sql" />
     <Build Include="StoredProcedure\Panier\InsertCommand.sql" />
     <Build Include="StoredProcedure\Panier\InsertCommandProduct.sql" />
+    <Build Include="StoredProcedure\People\Adress\SP_GetAdressForUser.sql" />
+    <Build Include="StoredProcedure\People\Customer\SP_GetCustomerByMailAndPasswordMatch.sql" />
+    <Build Include="StoredProcedure\People\Customer\SP_GetRoleById.sql" />
+    <Build Include="StoredProcedure\People\Customer\SP_RegisterCustomer.sql" />
+    <Build Include="StoredProcedure\People\Customer\SP_UpdateCustomerWithoutPassord.sql" />
+    <Build Include="StoredProcedure\People\Customer\SP_FindEmail.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="BlackGarlic.DB.publish.xml" />

@@ -2,7 +2,8 @@
 		@Email nvarchar(255),
 		@UserId int
 AS
-	SELECT p.Id
-	FROM Person p
-	where Email=@Email AND Id=@UserId
-RETURN 0
+BEGIN
+	SELECT c.Id
+	FROM Customer c
+	where Email=@Email AND Id!=@UserId
+END

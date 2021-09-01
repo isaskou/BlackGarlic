@@ -153,19 +153,21 @@ VALUES
     ('Com')
 GO
 
-EXEC SP_InsertPerson
-    @FirstName = 'Isabel',
-	@LastName ='Skou',
+EXEC SP_AddCustomer
+    @fn = 'Isabel',
+	@ln ='Skou',
+	@company ='SK',
 	@Email ='isa@mail.be',
-	@Password ='test',
-	@RoleId =1
+	@Pw ='test1234',
+	@Phone ='0489254252'
 GO
-EXEC SP_InsertPerson
-    @FirstName = 'Antoine',
-	@LastName ='Isembaert',
+EXEC SP_AddCustomer
+   @fn = 'Antoine',
+	@ln ='Isembaert',
+	@company ='AZEMBAERT',
 	@Email ='antoine@mail.be',
-	@Password ='test',
-	@RoleId =2
+	@Pw ='test1234',
+	@Phone ='0489254252'
 GO
 
 INSERT INTO ShipAmount
@@ -184,12 +186,6 @@ GO
 --        (0.12),
 --        (0.21)
 --GO
-
-EXEC SP_AddCustomer
-    @CompanyName = 'AZEMBAERT',
-    @PersonId = 2,
-    @Phone='0489254252'
-GO
 
 EXEC SP_AddAdress
     @Street='Rue Vanderkindere', 
