@@ -18,6 +18,7 @@ namespace BlackGarlic.API.Controllers.People
     public class CustomerController : ControllerBase
     {
         ICustomerService _customerService;
+        //Ajouter le token
 
         public CustomerController(ICustomerService customerService)
         {
@@ -45,27 +46,6 @@ namespace BlackGarlic.API.Controllers.People
                 });
             }
         }
-
-        //[HttpGet]
-        //[Route("api/Customer/GetAllWithDetails")]
-
-        //public IActionResult GetAllCustomersWithFullDetails()
-        //{
-        //    try
-        //    {
-        //        return Ok(_customerService.GetAllCustomersWithFullDetails());
-        //    }
-        //    catch (Exception ex)
-        //    {
-
-        //        return StatusCode(StatusCodes.Status500InternalServerError, new
-        //        {
-        //            Method = "GetAllWithDetails",
-        //            Message = ex.Message
-        //        });
-        //    }
-
-        //}
 
         // GET api/<CustomerController>/5
         [HttpGet("{id}")]
