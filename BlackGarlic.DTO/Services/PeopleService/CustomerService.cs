@@ -80,11 +80,11 @@ namespace BlackGarlic.DTO.Services.PeopleService
             customer.Role = new Role();
             customer.Adresses = new List<Adress>();
 
-            foreach (Adress a in _adressRepository.GetAdressByCustomerId(id).Select(x=>x.toDAL())
+            foreach (Adress a in _adressRepository.GetAdressByCustomerId(id).Select(x=>x.toDAL()))
             {
                 customer.Adresses.Add(a);
             }
-            customer.Role=_roleRepo.GetOne(customer.RoleId).toDAL());
+            customer.Role=_roleRepo.GetOne(customer.RoleId).toDAL();
             return customer;
         }
 
