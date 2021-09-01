@@ -97,7 +97,7 @@
     <Build Include="StoredProcedure\People\Customer\SP_GetAllCustomersWithAdress.sql" />
     <Build Include="StoredProcedure\People\Customer\SP_GetCustomerById.sql" />
     <Build Include="StoredProcedure\People\Customer\SP_GetCustomerByMail.sql" />
-    <Build Include="StoredProcedure\People\Customer\SP_GetCustomerByPersonName.sql" />
+    <Build Include="StoredProcedure\People\Customer\SP_GetCustomerByLastName.sql" />
     <Build Include="StoredProcedure\People\Customer\SP_UpdateCustomer.sql" />
     <Build Include="StoredProcedure\People\Customer\SP_GetAllCustomers.sql" />
     <Build Include="StoredProcedure\People\Customer\SP_UpdateCustomerAdress.sql" />
