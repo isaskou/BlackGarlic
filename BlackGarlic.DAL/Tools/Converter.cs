@@ -121,7 +121,7 @@ namespace BlackGarlic.DAL.Tools
                 Id = (int)reader["Id"],
                 DateOfCommand = (DateTime)reader["DateOfCommand"],
                 CustomerId = (int)reader["CustomerId"],
-                ShipAmountId = (int)reader["ShipAmountId"],
+                CustommerAdressId=(int)reader["CustomerAdressId"]
             };
         }
 
@@ -130,9 +130,9 @@ namespace BlackGarlic.DAL.Tools
             return new CommandProduct
             {
                 Id = (int)reader["Id"],
-                ProductId = (int)reader["ProductId"],
-                Quantity = (int)reader["Quantity"],
-                CaddieId = (int)reader["CaddieId"]
+                Quantity=(int)reader["Quantity"],
+                ProductId=(int)reader["ProductId"],
+                CommandId=(int)reader["CommandId"]
             };
         }
 
