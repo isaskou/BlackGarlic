@@ -10,6 +10,6 @@ namespace BlackGarlic.DTO.Interfaces.IPeopleService
 {
     public interface IAdressService : IService<Adress>
     {
-        Adress GetAdressByCustomerId(int id);
+        IEnumerable<Adress> GetAdressesByCustomerId(int id);
     }
 }

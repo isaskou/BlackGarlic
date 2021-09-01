@@ -24,9 +24,10 @@ namespace BlackGarlic.DTO.Services.PeopleService
             throw new NotImplementedException();
         }
 
-        public Adress GetAdressByCustomerId(int id)
+        public IEnumerable<Adress> GetAdressesByCustomerId(int id)
         {
-            return _adressRepository.GetAdressByCustomerId(id).toDAL();
+            List<Adress> adresses= _adressRepository.GetAdressesByCustomerId(id).Select(x => x.toDAL()).ToList();
+            return adresses;
         }
 
         public IEnumerable<Adress> GetAll()

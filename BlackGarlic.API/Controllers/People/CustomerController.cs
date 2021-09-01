@@ -18,12 +18,10 @@ namespace BlackGarlic.API.Controllers.People
     public class CustomerController : ControllerBase
     {
         ICustomerService _customerService;
-        IPersonService _personService;
 
-        public CustomerController(ICustomerService customerService, IPersonService personService)
+        public CustomerController(ICustomerService customerService)
         {
             _customerService = customerService;
-            _personService = personService;
         }
 
 
@@ -114,6 +112,11 @@ namespace BlackGarlic.API.Controllers.People
         {
             try
             {
+                if(_customerService.FindEmail(c.Email, c.Id))
+                {
+                    return Ok("cet email existe déjà");
+                }
+
                 return Ok(_customerService.Insert(c));
             }
             catch (Exception ex)
@@ -134,7 +137,11 @@ namespace BlackGarlic.API.Controllers.People
             {
                 if (customer is null) return BadRequest();
                 if (id != customer.Id) return BadRequest();
-
+                if(_customerService.FindEmail(customer.Email, customer.Id))
+                {
+                    return Ok("Cet email existe déjà");
+                }
+                //rajouter le token
                 customer.Id = id;
                 _customerService.Update(customer);
                 return Ok();

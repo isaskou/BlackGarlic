@@ -23,9 +23,9 @@ namespace BlackGarlic.DAL.Repositories.People
             throw new NotImplementedException();
         }
 
-        public IEnumerable<Adress> GetAdressByCustomerId(int id)
+        public IEnumerable<Adress> GetAdressesByCustomerId(int id)
         {
-            Command cmd = new Command("SP_GetAdressForUser", true);
+            Command cmd = new Command("SP_GetAdressesForCustomer", true);
             cmd.AddParameters("@id", id);
             return _connection.ExecuteReader(cmd, Converter.AdressConvert);
         }
