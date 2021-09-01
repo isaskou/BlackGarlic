@@ -119,7 +119,7 @@ namespace BlackGarlic.DAL.Tools
             return new Command
             {
                 Id = (int)reader["Id"],
-                OrderDate = (DateTime)reader["OrderDate"],
+                DateOfCommand = (DateTime)reader["DateOfCommand"],
                 CustomerId = (int)reader["CustomerId"],
                 ShipAmountId = (int)reader["ShipAmountId"],
             };
