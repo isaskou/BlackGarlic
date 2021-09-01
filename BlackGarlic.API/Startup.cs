@@ -1,10 +1,14 @@
 using BlackGarlic.DAL.Interfaces;
+using BlackGarlic.DAL.Interfaces.ICaddieRepos;
 using BlackGarlic.DAL.Interfaces.IPeopleRepos;
 using BlackGarlic.DAL.Interfaces.IProductsRepos;
+using BlackGarlic.DAL.Repositories.CaddiesRepo;
 using BlackGarlic.DAL.Repositories.People;
 using BlackGarlic.DAL.Repositories.ProductsRepo;
+using BlackGarlic.DTO.Interfaces.ICaddieServices;
 using BlackGarlic.DTO.Interfaces.IPeopleService;
 using BlackGarlic.DTO.Interfaces.IProductsServices;
+using BlackGarlic.DTO.Services.CaddieService;
 using BlackGarlic.DTO.Services.PeopleService;
 using BlackGarlic.DTO.Services.ProductsServices;
 using Microsoft.AspNetCore.Builder;
@@ -67,6 +71,11 @@ namespace BlackGarlic.API
 
             services.AddScoped<ICustomerAdressRepository, CustomerAdressRepository>();
             services.AddScoped<ICustomerAdressService, CustomerAdressService>();
+            #endregion
+
+            #region Caddie
+            services.AddScoped<ICommandRepository, CommandRepository>();
+            services.AddScoped<ICommandService, CommandService>();
             #endregion
 
         }
