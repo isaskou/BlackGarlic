@@ -10,29 +10,33 @@ namespace BlackGarlic.DTO.Models.People
     {
         public int Id { get; set; }
         public string CompanyName { get; set; }
-
-        public int PersonId { get; set; }
-        public Person Person { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
         public int? Phone { get; set; }
 
-        public int AdressId { get; set; }
-        public CustomerAdress CustomerAdress { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
+        public int RoleId { get; set; }
+        public Role Role { get; set; }
 
-        //public List<Adress> Adresses { get; set; }
+        public List<Adress> Adresses { get; set; }
 
         public Customer()
         {
         }
 
-        public Customer(int id, string companyName, int personId, Person person, int? phone, int adressId, CustomerAdress customerAdress)
+        public Customer(int id, string companyName, string firstName, string lastName, int? phone, string email, string password, int roleId, Role role, List<Adress> adresses)
         {
             Id = id;
             CompanyName = companyName;
-            PersonId = personId;
-            Person = person;
+            FirstName = firstName;
+            LastName = lastName;
             Phone = phone;
-            AdressId = adressId;
-            CustomerAdress = customerAdress;
+            Email = email;
+            Password = password;
+            RoleId = roleId;
+            Role = role;
+            Adresses = adresses;
         }
     }
 }

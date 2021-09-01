@@ -15,10 +15,12 @@ namespace BlackGarlic.DTO.Tools.PeopleMapper
             return new dto.Customer
             {
                 Id = c.Id,
-                CompanyName = c.CompanyName,
-                PersonId = c.PersonId,
-                Person = null,
-                Phone = c.Phone
+                FirstName = c.FirstName,
+                LastName = c.LastName,
+                Phone = c.Phone,
+                Email = c.Email,
+                RoleId = c.RoleId,
+                CompanyName = c.CompanyName
             };
         }
 
@@ -27,10 +29,16 @@ namespace BlackGarlic.DTO.Tools.PeopleMapper
             return new dal.Customer
             {
                 Id = c.Id,
+                FirstName = c.FirstName,
+                LastName = c.LastName,
+                Phone = c.Phone,
+                Email = c.Email,
+                RoleId = c.RoleId,
                 CompanyName = c.CompanyName,
-                PersonId = c.PersonId,
-                Phone = c.Phone
+                Password = c.Password
             };
+
+
         }
     }
 }

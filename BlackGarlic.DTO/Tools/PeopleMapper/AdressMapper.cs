@@ -12,7 +12,15 @@ namespace BlackGarlic.DTO.Tools.PeopleMapper
     {
         public static dto.Adress toDAL(this dal.Adress a)
         {
-            return new dto.Adress(a.Id, a.Street, a.Num, a.PostalCode, a.City, a.District);
+            return new dto.Adress()
+            {
+                Id = a.Id,
+                Street = a.Street,
+                Number = a.Num,
+                PostalCode = a.PostalCode,
+                City = a.City,
+                District = a.District
+            };
         }
 
         public static dal.Adress toDTO(this dto.Adress a)
