@@ -23,11 +23,11 @@ namespace BlackGarlic.DAL.Repositories.People
             throw new NotImplementedException();
         }
 
-        public Adress GetAdressByCustomerId(int id)
+        public IEnumerable<Adress> GetAdressByCustomerId(int id)
         {
-            Command cmd = new Command("SP_GetAdressByCustomerId", true);
-            cmd.AddParameters("CustomerId", id);
-            return _connection.ExecuteReader(cmd, Converter.AdressConvert).FirstOrDefault();
+            Command cmd = new Command("SP_GetAdressForUser", true);
+            cmd.AddParameters("@id", id);
+            return _connection.ExecuteReader(cmd, Converter.AdressConvert);
         }
 
         public IEnumerable<Adress> GetAll()
