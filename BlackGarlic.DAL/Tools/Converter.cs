@@ -36,7 +36,7 @@ namespace BlackGarlic.DAL.Tools
                 LastName = reader["LastName"].ToString(),
                 Email = reader["Email"].ToString(),
                 RoleId = (int)reader["RoleId"],
-                Phone = (int)reader["Phone"]
+                Phone = reader["Phone"].ToString()
             };
         }
 

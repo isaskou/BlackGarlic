@@ -16,6 +16,6 @@ namespace BlackGarlic.DAL.Models.People
         public string Email { get; set; }
         public string Password { get; set; }
         public int RoleId { get; set; }
-        public int? Phone { get; set; }
+        public string Phone { get; set; }
     }
 }
